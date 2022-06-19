@@ -1,0 +1,174 @@
+@prefix cm: <http://purl.org/artiamas/cm/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> a cm:MilitaryUnit .
+
+<http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> a cm:MilitaryUnit .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EarnedSA ;
+            cm:alertMessage "earned SA (via Proximity) on" ;
+            cm:object <http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
+            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
+    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
+    cm:alertMessage "earned SA (via Proximity) on" ;
+    cm:grid "38T PK 76496 33357" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:sequence 9 ;
+    cm:target <http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:02" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 71506 34861" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 5 ;
+    cm:target <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54639 33551" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 7 ;
+    cm:target <http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54455 31282" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 2 ;
+    cm:target <http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54678 38415" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 6 ;
+    cm:target <http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 68497 35744" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 8 ;
+    cm:target <http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 60436 34788" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 3 ;
+    cm:target <http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient <http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 64482 35290" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:sequence 4 ;
+    cm:target <http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EarnedSA ;
+            cm:alertMessage "earned SA (via Proximity) on" ;
+            cm:object <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
+            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
+    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
+    cm:alertMessage "earned SA (via Proximity) on" ;
+    cm:grid "38T PK 75785 36671" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:sequence 1 ;
+    cm:target <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+02:42" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:WAIT ;
+            cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
+            cm:reason "need reinforcements" ;
+            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
+    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
+    cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
+    cm:grid "38T PK 72076 34942" ;
+    cm:level "FLASH" ;
+    cm:messageType "INFO" ;
+    cm:sequence 10 ;
+    cm:target <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
+    cm:task _:TASK_5TrVYFgKZT ;
+    cm:time "H+03:13" .
+
+_:TASK_5TrVYFgKZT a cm:CrossingTask .
+
