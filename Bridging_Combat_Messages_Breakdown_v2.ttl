@@ -1,174 +1,752 @@
 @prefix cm: <http://purl.org/artiamas/cm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> a cm:MilitaryUnit .
-
-<http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> a cm:MilitaryUnit .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EarnedSA ;
-            cm:alertMessage "earned SA (via Proximity) on" ;
-            cm:object <http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
-            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
-    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
-    cm:alertMessage "earned SA (via Proximity) on" ;
-    cm:grid "38T PK 76496 33357" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:sequence 9 ;
-    cm:target <http://purl.org/artiamas/cm/3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:02" .
-
 [] a cm:CombatMessage ;
     cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
             cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 71506 34861" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:sequence 5 ;
-    cm:target <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54639 33551" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:sequence 7 ;
-    cm:target <http://purl.org/artiamas/cm/MORTAR_PLT_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54455 31282" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:sequence 2 ;
-    cm:target <http://purl.org/artiamas/cm/C_CO_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54678 38415" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:sequence 6 ;
-    cm:target <http://purl.org/artiamas/cm/D_CO_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> ] ;
+            cm:recipient _:UNIT_9CxDW6mYe3 ;
+            cm:sequence 8 ;
+            cm:time "H+03:00" ] ;
     cm:agent cm:NONE ;
     cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
     cm:grid "38T PK 68497 35744" ;
     cm:level "ROUTINE" ;
     cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
     cm:sequence 8 ;
-    cm:target <http://purl.org/artiamas/cm/B_CO_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
+    cm:target _:UNIT_9CxDW6mYe3 ;
+    cm:task _:TASK_m3hVAfVVkG ;
     cm:time "H+03:00" .
 
 [] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:UNABLE ;
+            cm:action [ a cm:Engage ;
+                    cm:object _:UNIT_DmKBJNL2VA ;
+                    cm:subject _:UNIT_WyQEYq9Lkm ] ;
+            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
+            cm:reason "not going after opfor (out of assigned boundary)" ;
+            cm:sequence 31 ;
+            cm:subject _:UNIT_WyQEYq9Lkm ;
+            cm:time "H+06:58" ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
+    cm:grid "38T PK 73483 36137" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 31 ;
+    cm:target _:UNIT_DmKBJNL2VA ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:58" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:StartFight ;
+            cm:alertMessage "in df range (fighting)" ;
+            cm:sequence 21 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+05:51" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "in DF range (fighting)" ;
+    cm:grid "38T PK 72356 35221" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 21 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:51" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:PAUSE ;
+            cm:action [ a cm:MOVE ;
+                    cm:object _:TASK_m3hVAfVVkG ;
+                    cm:subject _:UNIT_WyQEYq9Lkm ] ;
+            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
+            cm:reason "Crossing is not traversable" ;
+            cm:sequence 27 ;
+            cm:time "H+06:27" ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
+    cm:grid "38T PK 73790 35980" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 27 ;
+    cm:target _:TASK_m3hVAfVVkG ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:27" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Move ;
+            cm:alertMessage "moving to fight" ;
+            cm:reason <attack> ;
+            cm:sequence 15 ;
+            cm:subject _:UNIT_WyQEYq9Lkm ;
+            cm:time "H+05:06" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "moving to fight" ;
+    cm:grid "38T PK 72078 34945" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 15 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:06" .
+
+[] a cm:CombatMessage ;
     cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
             cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> ] ;
+            cm:recipient _:UNIT_bkqvBvWRPZ ;
+            cm:sequence 5 ;
+            cm:time "H+03:00" ] ;
     cm:agent cm:NONE ;
     cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 60436 34788" ;
+    cm:grid "38T PK 71506 34861" ;
     cm:level "ROUTINE" ;
     cm:messageType "LOG" ;
-    cm:sequence 3 ;
-    cm:target <http://purl.org/artiamas/cm/50_ENG_CO_(MRBC)_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 5 ;
+    cm:target _:UNIT_bkqvBvWRPZ ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:PAUSE ;
+            cm:action [ a cm:MOVE ;
+                    cm:object _:TASK_m3hVAfVVkG ;
+                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
+            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
+            cm:reason "Crossing is not traversable" ;
+            cm:sequence 17 ;
+            cm:time "H+05:40" ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
+    cm:grid "38T PK 73790 35980" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 17 ;
+    cm:target _:TASK_m3hVAfVVkG ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:40" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:StartFight ;
+            cm:alertMessage "in df range (fighting)" ;
+            cm:sequence 33 ;
+            cm:subject _:UNIT_WyQEYq9Lkm ;
+            cm:time "H+07:12" ;
+            cm:toward _:UNIT_JR8LKs2iZM ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "in DF range (fighting)" ;
+    cm:grid "38T PK 74229 36332" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 33 ;
+    cm:target _:UNIT_JR8LKs2iZM ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+07:12" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:PAUSE ;
+            cm:action [ a cm:MOVE ;
+                    cm:object _:TASK_m3hVAfVVkG ;
+                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
+            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
+            cm:reason "Crossing is not traversable" ;
+            cm:sequence 24 ;
+            cm:time "H+06:17" ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
+    cm:grid "38T PK 73790 35980" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 24 ;
+    cm:target _:TASK_m3hVAfVVkG ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:17" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Move ;
+            cm:alertMessage "moving to fight" ;
+            cm:reason <attack> ;
+            cm:sequence 12 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+04:05" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "moving to fight" ;
+    cm:grid "38T PK 72089 34956" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 12 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+04:05" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Attack ;
+            cm:alertMessage "receiving (artillery) fire" ;
+            cm:object cm:NONE ;
+            cm:sequence 35 ;
+            cm:time "H+08:07" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "receiving (artillery) fire" ;
+    cm:grid "38T PK 76263 35438" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 35 ;
+    cm:target _:UNIT_9CxDW6mYe3 ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+08:07" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EndAttack ;
+            cm:alertMessage "receiving (artillery) fire ended" ;
+            cm:object cm:NONE ;
+            cm:sequence 36 ;
+            cm:time "H+08:10" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "receiving (artillery) fire ended" ;
+    cm:grid "38T PK 76303 35204" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 36 ;
+    cm:target _:UNIT_9CxDW6mYe3 ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+08:10" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:StartFight ;
+            cm:alertMessage "in df range (fighting)" ;
+            cm:sequence 14 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+05:06" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "in DF range (fighting)" ;
+    cm:grid "38T PK 72329 35195" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 14 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:06" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
+            cm:object cm:FUEL ;
+            cm:recipient _:UNIT_9CxDW6mYe3 ;
+            cm:sequence 30 ;
+            cm:time "H+06:57" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
+    cm:grid "38T PK 73728 36025" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 30 ;
+    cm:target _:UNIT_9CxDW6mYe3 ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:57" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EarnedSA ;
+            cm:alertMessage "earned sa (via proximity) on" ;
+            cm:object _:UNIT_DmKBJNL2VA ;
+            cm:sequence 9 ;
+            cm:subject _:UNIT_bkqvBvWRPZ ;
+            cm:time "H+03:02" ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "earned SA (via Proximity) on" ;
+    cm:grid "38T PK 76496 33357" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 9 ;
+    cm:target _:UNIT_DmKBJNL2VA ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:02" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:RESUME ;
+            cm:action [ a cm:Move ;
+                    cm:object cm:NONE ;
+                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
+            cm:alertMessage "movement is resumed" ;
+            cm:sequence 16 ;
+            cm:subject _:UNIT_bkqvBvWRPZ ;
+            cm:time "H+05:38" ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "Movement is resumed" ;
+    cm:grid "38T PK 72076 34942" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 16 ;
+    cm:target cm:NONE ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:38" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Attack ;
+            cm:alertMessage "attacking (direct fire) against" ;
+            cm:object _:UNIT_8mrohcZQ8s ;
+            cm:sequence 13 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+05:06" ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "attacking (Direct Fire) against" ;
+    cm:grid "38T PK 72350 35215" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 13 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:06" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:WAIT ;
+            cm:action [ a cm:Attack ;
+                    cm:object _:UNIT_8mrohcZQ8s ;
+                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
+            cm:alertMessage "can't attack without reinforcements. awaiting commander's guidance" ;
+            cm:reason "need reinforcements" ;
+            cm:sequence 10 ;
+            cm:subject _:UNIT_bkqvBvWRPZ ;
+            cm:time "H+03:13" ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
+    cm:grid "38T PK 72076 34942" ;
+    cm:level "FLASH" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 10 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:13" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:END ;
+            cm:action [ a cm:Attack ;
+                    cm:object _:UNIT_8mrohcZQ8s ;
+                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
+            cm:alertMessage "planned battle removed.  no real targets." ;
+            cm:sequence 22 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+05:52" ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "planned battle removed.  No real targets." ;
+    cm:grid "38T PK 72357 35221" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 22 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:52" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:UNABLE ;
+            cm:action [ a cm:Engage ;
+                    cm:object _:UNIT_DmKBJNL2VA ;
+                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
+            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
+            cm:reason "not going after opfor (out of assigned boundary)" ;
+            cm:sequence 29 ;
+            cm:subject _:UNIT_bkqvBvWRPZ ;
+            cm:time "H+06:54" ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
+    cm:grid "38T PK 73485 36133" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 29 ;
+    cm:target _:UNIT_DmKBJNL2VA ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:54" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EarnedSA ;
+            cm:alertMessage "earned sa (via proximity) on" ;
+            cm:object _:UNIT_JR8LKs2iZM ;
+            cm:sequence 11 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+03:54" ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "earned SA (via Proximity) on" ;
+    cm:grid "38T PK 77676 34907" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 11 ;
+    cm:target _:UNIT_JR8LKs2iZM ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:54" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Move ;
+            cm:alertMessage "moving to fight" ;
+            cm:reason <attack> ;
+            cm:sequence 20 ;
+            cm:subject _:UNIT_bkqvBvWRPZ ;
+            cm:time "H+05:49" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
+    cm:alertMessage "moving to fight" ;
+    cm:grid "38T PK 72165 35037" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 20 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:49" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:TaskReport ;
+            cm:alertMessage "crossing task has started." ;
+            cm:sequence 23 ;
+            cm:subject _:UNIT_36F5Gm6NQc ;
+            cm:time "H+06:07" ] ;
+    cm:agent _:UNIT_36F5Gm6NQc ;
+    cm:alertMessage "Crossing Task has started." ;
+    cm:grid "38T PK 73550 36020" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 23 ;
+    cm:target _:TASK_m3hVAfVVkG ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:07" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient _:UNIT_gzGyyAG5cQ ;
+            cm:sequence 2 ;
+            cm:time "H+03:00" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54455 31282" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 2 ;
+    cm:target _:UNIT_gzGyyAG5cQ ;
+    cm:task _:TASK_m3hVAfVVkG ;
     cm:time "H+03:00" .
 
 [] a cm:CombatMessage ;
     cm:action [ a cm:Resupply ;
-            cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
+            cm:object cm:FUEL ;
+            cm:recipient _:UNIT_WyQEYq9Lkm ;
+            cm:sequence 25 ;
+            cm:time "H+06:22" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
+    cm:grid "38T PK 73207 36040" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 25 ;
+    cm:target _:UNIT_WyQEYq9Lkm ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:22" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EndFight ;
+            cm:alertMessage "attacking (direct fire) ended" ;
+            cm:sequence 19 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+05:48" ;
+            cm:toward _:UNIT_8mrohcZQ8s ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "attacking (Direct Fire) ended" ;
+    cm:grid "38T PK 72350 35215" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 19 ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:48" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:EndFight ;
+            cm:alertMessage "attacking (direct fire) ended" ;
+            cm:sequence 34 ;
+            cm:subject _:UNIT_WyQEYq9Lkm ;
+            cm:time "H+07:54" ;
+            cm:toward _:UNIT_JR8LKs2iZM ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "attacking (Direct Fire) ended" ;
+    cm:grid "38T PK 74229 36332" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 34 ;
+    cm:target _:UNIT_JR8LKs2iZM ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+07:54" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
             cm:object cm:AMMO ;
-            cm:recipient <http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> ] ;
+            cm:recipient _:UNIT_LrasmpTkir ;
+            cm:sequence 6 ;
+            cm:time "H+03:00" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54678 38415" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 6 ;
+    cm:target _:UNIT_LrasmpTkir ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Attack ;
+            cm:alertMessage "attacking (direct fire) against" ;
+            cm:object _:UNIT_JR8LKs2iZM ;
+            cm:sequence 32 ;
+            cm:subject _:UNIT_WyQEYq9Lkm ;
+            cm:time "H+07:12" ] ;
+    cm:agent _:UNIT_WyQEYq9Lkm ;
+    cm:alertMessage "attacking (Direct Fire) against" ;
+    cm:grid "38T PK 74229 36332" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 32 ;
+    cm:target _:UNIT_JR8LKs2iZM ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+07:12" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:TaskReport ;
+            cm:alertMessage "crossing task completed. units can cross." ;
+            cm:sequence 26 ;
+            cm:subject _:UNIT_36F5Gm6NQc ;
+            cm:time "H+06:25" ] ;
+    cm:agent _:UNIT_36F5Gm6NQc ;
+    cm:alertMessage "Crossing Task completed. Units can cross." ;
+    cm:grid "38T PK 73790 35980" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 26 ;
+    cm:target _:TASK_m3hVAfVVkG ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:25" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient _:UNIT_CCCeEBgXpJ ;
+            cm:sequence 7 ;
+            cm:time "H+03:00" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 54639 33551" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 7 ;
+    cm:target _:UNIT_CCCeEBgXpJ ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:00" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
+            cm:object cm:FUEL ;
+            cm:recipient _:UNIT_bkqvBvWRPZ ;
+            cm:sequence 18 ;
+            cm:time "H+05:44" ] ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
+    cm:grid "38T PK 72165 35037" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 18 ;
+    cm:target _:UNIT_bkqvBvWRPZ ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+05:44" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Report ;
+            cm:Status cm:UNABLE ;
+            cm:action [ a cm:Engage ;
+                    cm:object _:UNIT_DmKBJNL2VA ;
+                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
+            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
+            cm:reason "not going after opfor (out of assigned boundary)" ;
+            cm:sequence 28 ;
+            cm:subject _:UNIT_9CxDW6mYe3 ;
+            cm:time "H+06:28" ] ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
+    cm:grid "38T PK 73476 36148" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "INFO" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 28 ;
+    cm:target _:UNIT_DmKBJNL2VA ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+06:28" .
+
+[] a cm:CombatMessage ;
+    cm:action [ a cm:Resupply ;
+            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
+            cm:object cm:AMMO ;
+            cm:recipient _:UNIT_WyQEYq9Lkm ;
+            cm:sequence 4 ;
+            cm:time "H+03:00" ] ;
     cm:agent cm:NONE ;
     cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
     cm:grid "38T PK 64482 35290" ;
     cm:level "ROUTINE" ;
     cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
     cm:sequence 4 ;
-    cm:target <http://purl.org/artiamas/cm/A_CO_/_1_/_22_IN> ;
-    cm:task _:TASK_5TrVYFgKZT ;
+    cm:target _:UNIT_WyQEYq9Lkm ;
+    cm:task _:TASK_m3hVAfVVkG ;
     cm:time "H+03:00" .
 
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EarnedSA ;
-            cm:alertMessage "earned SA (via Proximity) on" ;
-            cm:object <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
-            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
-    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
+_:ACT_AGNjUoxJFH a cm:Attack ;
+    cm:object _:UNIT_9CxDW6mYe3 .
+
+_:ACT_TsyDvfKafK a cm:EarnedSA ;
+    cm:alertMessage "earned sa (via proximity) on" ;
+    cm:object _:UNIT_8mrohcZQ8s ;
+    cm:sequence 1 ;
+    cm:subject _:UNIT_bkqvBvWRPZ ;
+    cm:time "H+02:42" .
+
+_:ACT_Zq5qUhj7Pb a cm:Report ;
+    cm:Status cm:END ;
+    cm:action _:ACT_AGNjUoxJFH ;
+    cm:alertMessage "receiving (artillery) fire. firing has stopped" ;
+    cm:sequence 37 ;
+    cm:subject _:UNIT_9CxDW6mYe3 ;
+    cm:time "H+08:10" .
+
+_:ACT_bSEPDjpmas a cm:Resupply ;
+    cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
+    cm:object cm:AMMO ;
+    cm:recipient _:UNIT_36F5Gm6NQc ;
+    cm:sequence 3 ;
+    cm:time "H+03:00" .
+
+_:MSG_aWFSJpSSgJ a cm:CombatMessage ;
+    cm:action _:ACT_TsyDvfKafK ;
+    cm:agent _:UNIT_bkqvBvWRPZ ;
     cm:alertMessage "earned SA (via Proximity) on" ;
     cm:grid "38T PK 75785 36671" ;
     cm:level "ROUTINE" ;
     cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
     cm:sequence 1 ;
-    cm:target <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
-    cm:task _:TASK_5TrVYFgKZT ;
+    cm:target _:UNIT_8mrohcZQ8s ;
+    cm:task _:TASK_m3hVAfVVkG ;
     cm:time "H+02:42" .
 
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:WAIT ;
-            cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
-            cm:reason "need reinforcements" ;
-            cm:subject <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ] ;
-    cm:agent <http://purl.org/artiamas/cm/SCT_PLT_/_1_/_22_IN> ;
-    cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
-    cm:grid "38T PK 72076 34942" ;
-    cm:level "FLASH" ;
-    cm:messageType "INFO" ;
-    cm:sequence 10 ;
-    cm:target <http://purl.org/artiamas/cm/1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)> ;
-    cm:task _:TASK_5TrVYFgKZT ;
-    cm:time "H+03:13" .
+_:MSG_fQoz2YTiVq a cm:CombatMessage ;
+    cm:action _:ACT_Zq5qUhj7Pb ;
+    cm:agent _:UNIT_9CxDW6mYe3 ;
+    cm:alertMessage "receiving (artillery) fire. Firing has stopped" ;
+    cm:grid "38T PK 76303 35204" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "COMBAT" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 37 ;
+    cm:target cm:NONE ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+08:10" .
 
-_:TASK_5TrVYFgKZT a cm:CrossingTask .
+_:UNIT_CCCeEBgXpJ a cm:MilitaryUnit ;
+    rdfs:label "MORTAR_PLT_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_LrasmpTkir a cm:MilitaryUnit ;
+    rdfs:label "D_CO_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_gzGyyAG5cQ a cm:MilitaryUnit ;
+    rdfs:label "C_CO_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_36F5Gm6NQc a cm:MilitaryUnit ;
+    rdfs:label "50_ENG_CO_(MRBC)_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_DmKBJNL2VA a cm:MilitaryUnit ;
+    rdfs:label "3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+
+_:UNIT_JR8LKs2iZM a cm:MilitaryUnit ;
+    rdfs:label "2_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+
+_:UNIT_WyQEYq9Lkm a cm:MilitaryUnit ;
+    rdfs:label "A_CO_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_8mrohcZQ8s a cm:MilitaryUnit ;
+    rdfs:label "1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+
+_:UNIT_bkqvBvWRPZ a cm:MilitaryUnit ;
+    rdfs:label "SCT_PLT_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:UNIT_9CxDW6mYe3 a cm:MilitaryUnit ;
+    rdfs:label "B_CO_/_1_/_22_IN" ;
+    cm:force cm:BLUE .
+
+_:MSG_JU4HRqpPwJ a cm:CombatMessage ;
+    cm:action _:ACT_bSEPDjpmas ;
+    cm:agent cm:NONE ;
+    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
+    cm:grid "38T PK 60436 34788" ;
+    cm:level "ROUTINE" ;
+    cm:messageType "LOG" ;
+    cm:nextMessage _:MSG_JU4HRqpPwJ ;
+    cm:sequence 3 ;
+    cm:target _:UNIT_36F5Gm6NQc ;
+    cm:task _:TASK_m3hVAfVVkG ;
+    cm:time "H+03:00" .
+
+_:TASK_m3hVAfVVkG a cm:CrossingTask ;
+    rdfs:label "Crossing Task [1]" ;
+    cm:firstMessage _:MSG_aWFSJpSSgJ ;
+    cm:lastMessage _:MSG_fQoz2YTiVq .
 

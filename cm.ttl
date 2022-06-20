@@ -91,6 +91,12 @@
           rdfs:range :Force .
 
 
+###  http://purl.org/artiamas/cm/message
+:message rdf:type owl:ObjectProperty ;
+         rdfs:domain :Action ;
+         rdfs:range :Message .
+
+
 ###  http://purl.org/artiamas/cm/messageType
 :messageType rdf:type owl:ObjectProperty ;
              rdfs:domain :Message ;
@@ -133,12 +139,6 @@
       rdfs:range :Task .
 
 
-###  http://purl.org/artiamas/cm/time
-:time rdf:type owl:ObjectProperty ;
-      rdfs:domain :Action ;
-      rdfs:range :MilitaryUnit .
-
-
 ###  http://purl.org/artiamas/cm/unitOf
 :unitOf rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
@@ -146,10 +146,6 @@
                  owl:IrreflexiveProperty ;
         rdfs:domain :MilitaryUnit ;
         rdfs:range :MilitaryUnit .
-
-
-###  http://purl.org/artiamas/cm/wikidataItem
-:wikidataItem rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -186,7 +182,9 @@
 
 
 ###  http://purl.org/artiamas/cm/sequence
-:sequence rdf:type owl:DatatypeProperty .
+:sequence rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MessageOrAction ;
+          rdfs:range xsd:string .
 
 
 ###  http://purl.org/artiamas/cm/target
@@ -195,6 +193,7 @@
 
 ###  http://purl.org/artiamas/cm/time
 :time rdf:type owl:DatatypeProperty ;
+      rdfs:domain :MessageOrAction ;
       rdfs:range xsd:string .
 
 
