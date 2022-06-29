@@ -44,8 +44,7 @@
 
 
 ###  http://purl.org/artiamas/cm/firstMessage
-:firstMessage rdf:type owl:ObjectProperty ,
-                       owl:FunctionalProperty ;
+:firstMessage rdf:type owl:ObjectProperty ;
               rdfs:domain :Task ;
               rdfs:range :Message .
 
@@ -67,8 +66,7 @@
 
 
 ###  http://purl.org/artiamas/cm/lastMessage
-:lastMessage rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty ;
+:lastMessage rdf:type owl:ObjectProperty ;
              rdfs:domain :Task ;
              rdfs:range :Message .
 
@@ -84,9 +82,7 @@
 
 
 ###  http://purl.org/artiamas/cm/memberOf
-:memberOf rdf:type owl:ObjectProperty ,
-                   owl:AsymmetricProperty ,
-                   owl:IrreflexiveProperty ;
+:memberOf rdf:type owl:ObjectProperty ;
           rdfs:domain :MilitaryUnit ;
           rdfs:range :Force .
 
@@ -110,8 +106,7 @@
 
 
 ###  http://purl.org/artiamas/cm/nextMessage
-:nextMessage rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty ;
+:nextMessage rdf:type owl:ObjectProperty ;
              rdfs:domain :Message ;
              rdfs:range :Message .
 
@@ -141,9 +136,6 @@
 
 ###  http://purl.org/artiamas/cm/unitOf
 :unitOf rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf owl:topObjectProperty ;
-        rdf:type owl:AsymmetricProperty ,
-                 owl:IrreflexiveProperty ;
         rdfs:domain :MilitaryUnit ;
         rdfs:range :MilitaryUnit .
 
@@ -217,11 +209,7 @@
 
 ###  http://purl.org/artiamas/cm/Battalion
 :Battalion rdf:type owl:Class ;
-           rdfs:subClassOf :MilitaryUnit ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :unitOf ;
-                             owl:someValuesFrom :RegimentOrBrigade
-                           ] ;
+           rdfs:subClassOf :MilitaryUnit ;
            :wikidata <https://www.wikidata.org/wiki/Q6382533> .
 
 
@@ -243,11 +231,7 @@
 
 ###  http://purl.org/artiamas/cm/Company
 :Company rdf:type owl:Class ;
-         rdfs:subClassOf :MilitaryUnit ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :unitOf ;
-                           owl:someValuesFrom :Battalion
-                         ] ;
+         rdfs:subClassOf :MilitaryUnit ;
          :wikidata <https://www.wikidata.org/wiki/Q102538> .
 
 
@@ -288,11 +272,7 @@
 
 ###  http://purl.org/artiamas/cm/EngineeringCompany
 :EngineeringCompany rdf:type owl:Class ;
-                    rdfs:subClassOf :Company ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasRole ;
-                                      owl:someValuesFrom :Engineering
-                                    ] .
+                    rdfs:subClassOf :Company .
 
 
 ###  http://purl.org/artiamas/cm/Force
@@ -364,12 +344,13 @@
 
 ###  http://purl.org/artiamas/cm/Platoon
 :Platoon rdf:type owl:Class ;
-         rdfs:subClassOf :MilitaryUnit ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasRole ;
-                           owl:someValuesFrom :Mortar
-                         ] ;
+         rdfs:subClassOf :MilitaryUnit ;
          :wikidata <https://www.wikidata.org/wiki/Q304673> .
+
+
+###  http://purl.org/artiamas/cm/RESUME
+:RESUME rdf:type owl:Class ;
+        rdfs:subClassOf :ActionStatus .
 
 
 ###  http://purl.org/artiamas/cm/Regiment
@@ -407,11 +388,7 @@
 
 ###  http://purl.org/artiamas/cm/ScoutPlatoon
 :ScoutPlatoon rdf:type owl:Class ;
-              rdfs:subClassOf :Platoon ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasRole ;
-                                owl:someValuesFrom :Scouting
-                              ] .
+              rdfs:subClassOf :Platoon .
 
 
 ###  http://purl.org/artiamas/cm/Scouting

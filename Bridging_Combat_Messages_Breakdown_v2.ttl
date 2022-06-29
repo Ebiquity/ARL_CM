@@ -1,752 +1,740 @@
-@prefix cm: <http://purl.org/artiamas/cm/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_9CxDW6mYe3 ;
-            cm:sequence 8 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 68497 35744" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 8 ;
-    cm:target _:UNIT_9CxDW6mYe3 ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:UNABLE ;
-            cm:action [ a cm:Engage ;
-                    cm:object _:UNIT_DmKBJNL2VA ;
-                    cm:subject _:UNIT_WyQEYq9Lkm ] ;
-            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
-            cm:reason "not going after opfor (out of assigned boundary)" ;
-            cm:sequence 31 ;
-            cm:subject _:UNIT_WyQEYq9Lkm ;
-            cm:time "H+06:58" ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
-    cm:grid "38T PK 73483 36137" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 31 ;
-    cm:target _:UNIT_DmKBJNL2VA ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:58" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:StartFight ;
-            cm:alertMessage "in df range (fighting)" ;
-            cm:sequence 21 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+05:51" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "in DF range (fighting)" ;
-    cm:grid "38T PK 72356 35221" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 21 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:51" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:PAUSE ;
-            cm:action [ a cm:MOVE ;
-                    cm:object _:TASK_m3hVAfVVkG ;
-                    cm:subject _:UNIT_WyQEYq9Lkm ] ;
-            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
-            cm:reason "Crossing is not traversable" ;
-            cm:sequence 27 ;
-            cm:time "H+06:27" ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
-    cm:grid "38T PK 73790 35980" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 27 ;
-    cm:target _:TASK_m3hVAfVVkG ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:27" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Move ;
-            cm:alertMessage "moving to fight" ;
-            cm:reason <attack> ;
-            cm:sequence 15 ;
-            cm:subject _:UNIT_WyQEYq9Lkm ;
-            cm:time "H+05:06" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "moving to fight" ;
-    cm:grid "38T PK 72078 34945" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 15 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:06" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_bkqvBvWRPZ ;
-            cm:sequence 5 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 71506 34861" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 5 ;
-    cm:target _:UNIT_bkqvBvWRPZ ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:PAUSE ;
-            cm:action [ a cm:MOVE ;
-                    cm:object _:TASK_m3hVAfVVkG ;
-                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
-            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
-            cm:reason "Crossing is not traversable" ;
-            cm:sequence 17 ;
-            cm:time "H+05:40" ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
-    cm:grid "38T PK 73790 35980" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 17 ;
-    cm:target _:TASK_m3hVAfVVkG ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:40" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:StartFight ;
-            cm:alertMessage "in df range (fighting)" ;
-            cm:sequence 33 ;
-            cm:subject _:UNIT_WyQEYq9Lkm ;
-            cm:time "H+07:12" ;
-            cm:toward _:UNIT_JR8LKs2iZM ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "in DF range (fighting)" ;
-    cm:grid "38T PK 74229 36332" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 33 ;
-    cm:target _:UNIT_JR8LKs2iZM ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+07:12" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:PAUSE ;
-            cm:action [ a cm:MOVE ;
-                    cm:object _:TASK_m3hVAfVVkG ;
-                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
-            cm:alertMessage "  is paused at crossing control point. crossing is not traversable." ;
-            cm:reason "Crossing is not traversable" ;
-            cm:sequence 24 ;
-            cm:time "H+06:17" ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "  is paused at Crossing Control Point. Crossing is not traversable." ;
-    cm:grid "38T PK 73790 35980" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 24 ;
-    cm:target _:TASK_m3hVAfVVkG ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:17" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Move ;
-            cm:alertMessage "moving to fight" ;
-            cm:reason <attack> ;
-            cm:sequence 12 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+04:05" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "moving to fight" ;
-    cm:grid "38T PK 72089 34956" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 12 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+04:05" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Attack ;
-            cm:alertMessage "receiving (artillery) fire" ;
-            cm:object cm:NONE ;
-            cm:sequence 35 ;
-            cm:time "H+08:07" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "receiving (artillery) fire" ;
-    cm:grid "38T PK 76263 35438" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 35 ;
-    cm:target _:UNIT_9CxDW6mYe3 ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+08:07" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EndAttack ;
-            cm:alertMessage "receiving (artillery) fire ended" ;
-            cm:object cm:NONE ;
-            cm:sequence 36 ;
-            cm:time "H+08:10" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "receiving (artillery) fire ended" ;
-    cm:grid "38T PK 76303 35204" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 36 ;
-    cm:target _:UNIT_9CxDW6mYe3 ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+08:10" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:StartFight ;
-            cm:alertMessage "in df range (fighting)" ;
-            cm:sequence 14 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+05:06" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "in DF range (fighting)" ;
-    cm:grid "38T PK 72329 35195" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 14 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:06" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
-            cm:object cm:FUEL ;
-            cm:recipient _:UNIT_9CxDW6mYe3 ;
-            cm:sequence 30 ;
-            cm:time "H+06:57" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
-    cm:grid "38T PK 73728 36025" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 30 ;
-    cm:target _:UNIT_9CxDW6mYe3 ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:57" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EarnedSA ;
-            cm:alertMessage "earned sa (via proximity) on" ;
-            cm:object _:UNIT_DmKBJNL2VA ;
-            cm:sequence 9 ;
-            cm:subject _:UNIT_bkqvBvWRPZ ;
-            cm:time "H+03:02" ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "earned SA (via Proximity) on" ;
-    cm:grid "38T PK 76496 33357" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 9 ;
-    cm:target _:UNIT_DmKBJNL2VA ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:02" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:RESUME ;
-            cm:action [ a cm:Move ;
-                    cm:object cm:NONE ;
-                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
-            cm:alertMessage "movement is resumed" ;
-            cm:sequence 16 ;
-            cm:subject _:UNIT_bkqvBvWRPZ ;
-            cm:time "H+05:38" ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "Movement is resumed" ;
-    cm:grid "38T PK 72076 34942" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 16 ;
-    cm:target cm:NONE ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:38" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Attack ;
-            cm:alertMessage "attacking (direct fire) against" ;
-            cm:object _:UNIT_8mrohcZQ8s ;
-            cm:sequence 13 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+05:06" ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "attacking (Direct Fire) against" ;
-    cm:grid "38T PK 72350 35215" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 13 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:06" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:WAIT ;
-            cm:action [ a cm:Attack ;
-                    cm:object _:UNIT_8mrohcZQ8s ;
-                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
-            cm:alertMessage "can't attack without reinforcements. awaiting commander's guidance" ;
-            cm:reason "need reinforcements" ;
-            cm:sequence 10 ;
-            cm:subject _:UNIT_bkqvBvWRPZ ;
-            cm:time "H+03:13" ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "can't attack without reinforcements. Awaiting commander's guidance" ;
-    cm:grid "38T PK 72076 34942" ;
-    cm:level "FLASH" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 10 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:13" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:END ;
-            cm:action [ a cm:Attack ;
-                    cm:object _:UNIT_8mrohcZQ8s ;
-                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
-            cm:alertMessage "planned battle removed.  no real targets." ;
-            cm:sequence 22 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+05:52" ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "planned battle removed.  No real targets." ;
-    cm:grid "38T PK 72357 35221" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 22 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:52" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:UNABLE ;
-            cm:action [ a cm:Engage ;
-                    cm:object _:UNIT_DmKBJNL2VA ;
-                    cm:subject _:UNIT_bkqvBvWRPZ ] ;
-            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
-            cm:reason "not going after opfor (out of assigned boundary)" ;
-            cm:sequence 29 ;
-            cm:subject _:UNIT_bkqvBvWRPZ ;
-            cm:time "H+06:54" ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
-    cm:grid "38T PK 73485 36133" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 29 ;
-    cm:target _:UNIT_DmKBJNL2VA ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:54" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EarnedSA ;
-            cm:alertMessage "earned sa (via proximity) on" ;
-            cm:object _:UNIT_JR8LKs2iZM ;
-            cm:sequence 11 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+03:54" ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "earned SA (via Proximity) on" ;
-    cm:grid "38T PK 77676 34907" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 11 ;
-    cm:target _:UNIT_JR8LKs2iZM ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:54" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Move ;
-            cm:alertMessage "moving to fight" ;
-            cm:reason <attack> ;
-            cm:sequence 20 ;
-            cm:subject _:UNIT_bkqvBvWRPZ ;
-            cm:time "H+05:49" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "moving to fight" ;
-    cm:grid "38T PK 72165 35037" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 20 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:49" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:TaskReport ;
-            cm:alertMessage "crossing task has started." ;
-            cm:sequence 23 ;
-            cm:subject _:UNIT_36F5Gm6NQc ;
-            cm:time "H+06:07" ] ;
-    cm:agent _:UNIT_36F5Gm6NQc ;
-    cm:alertMessage "Crossing Task has started." ;
-    cm:grid "38T PK 73550 36020" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 23 ;
-    cm:target _:TASK_m3hVAfVVkG ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:07" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_gzGyyAG5cQ ;
-            cm:sequence 2 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54455 31282" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 2 ;
-    cm:target _:UNIT_gzGyyAG5cQ ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
-            cm:object cm:FUEL ;
-            cm:recipient _:UNIT_WyQEYq9Lkm ;
-            cm:sequence 25 ;
-            cm:time "H+06:22" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
-    cm:grid "38T PK 73207 36040" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 25 ;
-    cm:target _:UNIT_WyQEYq9Lkm ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:22" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EndFight ;
-            cm:alertMessage "attacking (direct fire) ended" ;
-            cm:sequence 19 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+05:48" ;
-            cm:toward _:UNIT_8mrohcZQ8s ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "attacking (Direct Fire) ended" ;
-    cm:grid "38T PK 72350 35215" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 19 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:48" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:EndFight ;
-            cm:alertMessage "attacking (direct fire) ended" ;
-            cm:sequence 34 ;
-            cm:subject _:UNIT_WyQEYq9Lkm ;
-            cm:time "H+07:54" ;
-            cm:toward _:UNIT_JR8LKs2iZM ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "attacking (Direct Fire) ended" ;
-    cm:grid "38T PK 74229 36332" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 34 ;
-    cm:target _:UNIT_JR8LKs2iZM ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+07:54" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_LrasmpTkir ;
-            cm:sequence 6 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54678 38415" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 6 ;
-    cm:target _:UNIT_LrasmpTkir ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Attack ;
-            cm:alertMessage "attacking (direct fire) against" ;
-            cm:object _:UNIT_JR8LKs2iZM ;
-            cm:sequence 32 ;
-            cm:subject _:UNIT_WyQEYq9Lkm ;
-            cm:time "H+07:12" ] ;
-    cm:agent _:UNIT_WyQEYq9Lkm ;
-    cm:alertMessage "attacking (Direct Fire) against" ;
-    cm:grid "38T PK 74229 36332" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 32 ;
-    cm:target _:UNIT_JR8LKs2iZM ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+07:12" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:TaskReport ;
-            cm:alertMessage "crossing task completed. units can cross." ;
-            cm:sequence 26 ;
-            cm:subject _:UNIT_36F5Gm6NQc ;
-            cm:time "H+06:25" ] ;
-    cm:agent _:UNIT_36F5Gm6NQc ;
-    cm:alertMessage "Crossing Task completed. Units can cross." ;
-    cm:grid "38T PK 73790 35980" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 26 ;
-    cm:target _:TASK_m3hVAfVVkG ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:25" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_CCCeEBgXpJ ;
-            cm:sequence 7 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 54639 33551" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 7 ;
-    cm:target _:UNIT_CCCeEBgXpJ ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [low] (fuel) delivered to" ;
-            cm:object cm:FUEL ;
-            cm:recipient _:UNIT_bkqvBvWRPZ ;
-            cm:sequence 18 ;
-            cm:time "H+05:44" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [low] (fuel) delivered to" ;
-    cm:grid "38T PK 72165 35037" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 18 ;
-    cm:target _:UNIT_bkqvBvWRPZ ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+05:44" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Report ;
-            cm:Status cm:UNABLE ;
-            cm:action [ a cm:Engage ;
-                    cm:object _:UNIT_DmKBJNL2VA ;
-                    cm:subject _:UNIT_9CxDW6mYe3 ] ;
-            cm:alertMessage "not going after opfor (out of assigned boundary)" ;
-            cm:reason "not going after opfor (out of assigned boundary)" ;
-            cm:sequence 28 ;
-            cm:subject _:UNIT_9CxDW6mYe3 ;
-            cm:time "H+06:28" ] ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "not going after OPFOR (out of assigned boundary)" ;
-    cm:grid "38T PK 73476 36148" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "INFO" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 28 ;
-    cm:target _:UNIT_DmKBJNL2VA ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+06:28" .
-
-[] a cm:CombatMessage ;
-    cm:action [ a cm:Resupply ;
-            cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-            cm:object cm:AMMO ;
-            cm:recipient _:UNIT_WyQEYq9Lkm ;
-            cm:sequence 4 ;
-            cm:time "H+03:00" ] ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 64482 35290" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 4 ;
-    cm:target _:UNIT_WyQEYq9Lkm ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-_:ACT_AGNjUoxJFH a cm:Attack ;
-    cm:object _:UNIT_9CxDW6mYe3 .
-
-_:ACT_TsyDvfKafK a cm:EarnedSA ;
-    cm:alertMessage "earned sa (via proximity) on" ;
-    cm:object _:UNIT_8mrohcZQ8s ;
-    cm:sequence 1 ;
-    cm:subject _:UNIT_bkqvBvWRPZ ;
-    cm:time "H+02:42" .
-
-_:ACT_Zq5qUhj7Pb a cm:Report ;
-    cm:Status cm:END ;
-    cm:action _:ACT_AGNjUoxJFH ;
-    cm:alertMessage "receiving (artillery) fire. firing has stopped" ;
-    cm:sequence 37 ;
-    cm:subject _:UNIT_9CxDW6mYe3 ;
-    cm:time "H+08:10" .
-
-_:ACT_bSEPDjpmas a cm:Resupply ;
-    cm:alertMessage "log resupply [thin air] [logpac] (ammo)" ;
-    cm:object cm:AMMO ;
-    cm:recipient _:UNIT_36F5Gm6NQc ;
-    cm:sequence 3 ;
-    cm:time "H+03:00" .
-
-_:MSG_aWFSJpSSgJ a cm:CombatMessage ;
-    cm:action _:ACT_TsyDvfKafK ;
-    cm:agent _:UNIT_bkqvBvWRPZ ;
-    cm:alertMessage "earned SA (via Proximity) on" ;
-    cm:grid "38T PK 75785 36671" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 1 ;
-    cm:target _:UNIT_8mrohcZQ8s ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+02:42" .
-
-_:MSG_fQoz2YTiVq a cm:CombatMessage ;
-    cm:action _:ACT_Zq5qUhj7Pb ;
-    cm:agent _:UNIT_9CxDW6mYe3 ;
-    cm:alertMessage "receiving (artillery) fire. Firing has stopped" ;
-    cm:grid "38T PK 76303 35204" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "COMBAT" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 37 ;
-    cm:target cm:NONE ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+08:10" .
-
-_:UNIT_CCCeEBgXpJ a cm:MilitaryUnit ;
-    rdfs:label "MORTAR_PLT_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_LrasmpTkir a cm:MilitaryUnit ;
-    rdfs:label "D_CO_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_gzGyyAG5cQ a cm:MilitaryUnit ;
-    rdfs:label "C_CO_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_36F5Gm6NQc a cm:MilitaryUnit ;
-    rdfs:label "50_ENG_CO_(MRBC)_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_DmKBJNL2VA a cm:MilitaryUnit ;
-    rdfs:label "3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
-
-_:UNIT_JR8LKs2iZM a cm:MilitaryUnit ;
-    rdfs:label "2_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
-
-_:UNIT_WyQEYq9Lkm a cm:MilitaryUnit ;
-    rdfs:label "A_CO_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_8mrohcZQ8s a cm:MilitaryUnit ;
-    rdfs:label "1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
-
-_:UNIT_bkqvBvWRPZ a cm:MilitaryUnit ;
-    rdfs:label "SCT_PLT_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:UNIT_9CxDW6mYe3 a cm:MilitaryUnit ;
-    rdfs:label "B_CO_/_1_/_22_IN" ;
-    cm:force cm:BLUE .
-
-_:MSG_JU4HRqpPwJ a cm:CombatMessage ;
-    cm:action _:ACT_bSEPDjpmas ;
-    cm:agent cm:NONE ;
-    cm:alertMessage "Log resupply [thin air] [LOGPAC] (ammo)" ;
-    cm:grid "38T PK 60436 34788" ;
-    cm:level "ROUTINE" ;
-    cm:messageType "LOG" ;
-    cm:nextMessage _:MSG_JU4HRqpPwJ ;
-    cm:sequence 3 ;
-    cm:target _:UNIT_36F5Gm6NQc ;
-    cm:task _:TASK_m3hVAfVVkG ;
-    cm:time "H+03:00" .
-
-_:TASK_m3hVAfVVkG a cm:CrossingTask ;
-    rdfs:label "Crossing Task [1]" ;
-    cm:firstMessage _:MSG_aWFSJpSSgJ ;
-    cm:lastMessage _:MSG_fQoz2YTiVq .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/alertMessage> "  is paused at Crossing Control Point. Crossing is not traversable." .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/time> "H+05:48" .
+_:MSG_C3aUHbvdTx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/action> _:ACT_3r7yW5eX96 .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/grid> "38T PK 64482 35290" .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/sequence> "21"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/target> _:UNIT_9CxDW6mYe3 .
+_:ACT_UteRhuVUXv <http://purl.org/artiamas/cm/sequence> "21"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:UNIT_CCCeEBgXpJ <http://www.w3.org/2000/01/rdf-schema#label> "MORTAR_PLT_/_1_/_22_IN" .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/target> _:UNIT_DmKBJNL2VA .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:ACT_jH5yPEQLrF <http://purl.org/artiamas/cm/sequence> "30"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:TASK_m3hVAfVVkG <http://www.w3.org/2000/01/rdf-schema#label> "Crossing Task [1]" .
+_:ACT_iXhyYuoVLA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Move> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/action> _:ACT_GVy23Zs8kK .
+_:ACT_JbM3WN8AuG <http://purl.org/artiamas/cm/sequence> "26"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_bSEPDjpmas <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/PAUSE> .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/sequence> "29"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/grid> "38T PK 74229 36332" .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/sequence> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/grid> "38T PK 72357 35221" .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/time> "H+06:57" .
+_:ACT_AGNjUoxJFH <http://purl.org/artiamas/cm/object> _:UNIT_9CxDW6mYe3 .
+_:ACT_bVQW2giVkn <http://purl.org/artiamas/cm/object> _:UNIT_JR8LKs2iZM .
+_:ACT_85U3XmrQtn <http://purl.org/artiamas/cm/subject> _:UNIT_36F5Gm6NQc .
+_:ACT_jsyXq3PLCx <http://purl.org/artiamas/cm/time> "H+07:12" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/action> _:ACT_3VDfYtcopj .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/target> _:UNIT_CCCeEBgXpJ .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/action> _:ACT_bfqKiFhuSS .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:ACT_TsyDvfKafK <http://purl.org/artiamas/cm/alertMessage> "earned sa (via proximity) on" .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/action> _:ACT_WiSMLW2Z5p .
+_:MSG_fQoz2YTiVq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/target> _:UNIT_JR8LKs2iZM .
+_:ACT_jH5yPEQLrF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:ACT_jsyXq3PLCx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/time> "H+07:12" .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/time> "H+06:22" .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_3jJ52nDcFD <http://purl.org/artiamas/cm/object> _:UNIT_DmKBJNL2VA .
+_:MSG_TDwSHiqJoK <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_jujNUYtPoW <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/NONE> .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/action> _:ACT_iFwdghJizK .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/sequence> "19"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:ACT_VzaTRdJC9C <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/WAIT> .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/target> _:UNIT_DmKBJNL2VA .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:UNIT_gzGyyAG5cQ <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/grid> "38T PK 54639 33551" .
+_:ACT_bfqKiFhuSS <http://purl.org/artiamas/cm/recipient> _:UNIT_WyQEYq9Lkm .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/target> _:TASK_m3hVAfVVkG .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/grid> "38T PK 54678 38415" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:ACT_Zq5qUhj7Pb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/action> _:ACT_ax9D6DDk9E .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:ACT_VzaTRdJC9C <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/alertMessage> "movement is resumed" .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/grid> "38T PK 74229 36332" .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:ACT_Duuti5hDP6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:ACT_S7hPbtwkXw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Engage> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/sequence> "17"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_arrApdZAtz <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/sequence> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_UteRhuVUXv <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:ACT_bVQW2giVkn <http://purl.org/artiamas/cm/sequence> "11"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_47g2xDLJuC <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:ACT_F6vQRpmpdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EndAttack> .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_2TgdeiXnFQ <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/agent> _:UNIT_36F5Gm6NQc .
+_:ACT_85U3XmrQtn <http://purl.org/artiamas/cm/sequence> "23"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_Duuti5hDP6 <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/grid> "38T PK 73483 36137" .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/alertMessage> "can't attack without reinforcements. awaiting commander's guidance" .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire. Firing has stopped" .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/time> "H+08:10" .
+_:UNIT_36F5Gm6NQc <http://www.w3.org/2000/01/rdf-schema#label> "50_ENG_CO_(MRBC)_/_1_/_22_IN" .
+_:UNIT_WyQEYq9Lkm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/alertMessage> "earned SA (via Proximity) on" .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_27JirR9yJu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:ACT_bfqKiFhuSS <http://purl.org/artiamas/cm/sequence> "25"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/time> "H+05:51" .
+_:ACT_cpcuYChjpF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Move> .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_UteRhuVUXv <http://purl.org/artiamas/cm/time> "H+05:51" .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/grid> "38T PK 72165 35037" .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:MSG_aWFSJpSSgJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/target> _:UNIT_36F5Gm6NQc .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:ACT_jsyXq3PLCx <http://purl.org/artiamas/cm/alertMessage> "attacking (direct fire) against" .
+_:ACT_ehQXAXrLfq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/action> _:ACT_iXhyYuoVLA .
+_:ACT_TsyDvfKafK <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/alertMessage> "attacking (Direct Fire) against" .
+_:ACT_2TgdeiXnFQ <http://purl.org/artiamas/cm/time> "H+07:12" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/time> "H+06:27" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/alertMessage> "  is paused at Crossing Control Point. Crossing is not traversable." .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/END> .
+_:ACT_U5zQ553TV2 <http://purl.org/artiamas/cm/alertMessage> "earned sa (via proximity) on" .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/action> _:ACT_jujNUYtPoW .
+_:TASK_m3hVAfVVkG <http://purl.org/artiamas/cm/firstMessage> _:MSG_aWFSJpSSgJ .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/action> _:ACT_TjMXxBrs79 .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/grid> "38T PK 73790 35980" .
+_:ACT_ZVKVoHeKdf <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/action> _:ACT_JbM3WN8AuG .
+_:ACT_U5zQ553TV2 <http://purl.org/artiamas/cm/sequence> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_VzaTRdJC9C <http://purl.org/artiamas/cm/recipient> _:UNIT_LrasmpTkir .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/alertMessage> "in DF range (fighting)" .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/target> _:UNIT_JR8LKs2iZM .
+_:ACT_2TgdeiXnFQ <http://purl.org/artiamas/cm/alertMessage> "in df range (fighting)" .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_ax9D6DDk9E <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_7zGRMMnpFY <http://purl.org/artiamas/cm/recipient> _:UNIT_bkqvBvWRPZ .
+_:ACT_JbM3WN8AuG <http://purl.org/artiamas/cm/time> "H+06:25" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/action> _:ACT_bSEPDjpmas .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/target> _:UNIT_WyQEYq9Lkm .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/time> "H+05:52" .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/action> _:ACT_F6vQRpmpdf .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:UNIT_gzGyyAG5cQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/alertMessage> "attacking (Direct Fire) ended" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_Amar5NMf7Q <http://purl.org/artiamas/cm/recipient> _:UNIT_CCCeEBgXpJ .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/grid> "38T PK 60436 34788" .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/action> _:ACT_ZVKVoHeKdf .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_2TgdeiXnFQ <http://purl.org/artiamas/cm/sequence> "33"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_bQcNxgNnxL <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_ax9D6DDk9E <http://purl.org/artiamas/cm/object> _:UNIT_8mrohcZQ8s .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/sequence> "23"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_TsyDvfKafK <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EarnedSA> .
+_:ACT_bmJLLB6edL <http://purl.org/artiamas/cm/object> _:TASK_m3hVAfVVkG .
+_:ACT_UwFu3QLMMU <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/sequence> "25"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:UNIT_9CxDW6mYe3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/time> "H+05:52" .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/action> _:ACT_VzaTRdJC9C .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_GbNPw8xmcD <http://purl.org/artiamas/cm/sequence> "13"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/sequence> "31"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_bSEPDjpmas <http://purl.org/artiamas/cm/recipient> _:UNIT_36F5Gm6NQc .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/sequence> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/reason> "not going after opfor (out of assigned boundary)" .
+_:ACT_UwFu3QLMMU <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_nyDbqS88US <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/target> _:UNIT_JR8LKs2iZM .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/sequence> "34"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/UNABLE> .
+_:ACT_VzaTRdJC9C <http://purl.org/artiamas/cm/sequence> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/time> "H+06:17" .
+_:ACT_VAkFoAHUn9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:UNIT_bkqvBvWRPZ <http://www.w3.org/2000/01/rdf-schema#label> "SCT_PLT_/_1_/_22_IN" .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:UNIT_WyQEYq9Lkm <http://www.w3.org/2000/01/rdf-schema#label> "A_CO_/_1_/_22_IN" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/time> "H+05:40" .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/UNABLE> .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/sequence> "13"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/reason> "not going after opfor (out of assigned boundary)" .
+_:ACT_bVQW2giVkn <http://purl.org/artiamas/cm/time> "H+03:54" .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/time> "H+06:27" .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/action> _:ACT_MmDFVMbTte .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/alertMessage> "not going after opfor (out of assigned boundary)" .
+_:MSG_64AHQhkuqM <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/target> _:UNIT_JR8LKs2iZM .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/alertMessage> "can't attack without reinforcements. Awaiting commander's guidance" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/grid> "38T PK 72350 35215" .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire ended" .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/sequence> "11"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/alertMessage> "in DF range (fighting)" .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/action> _:ACT_85U3XmrQtn .
+_:MSG_GQxXjNHLV9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/action> _:ACT_47g2xDLJuC .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:ACT_6Y2GnBL6HQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:UNIT_LrasmpTkir <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_Hb8qwAELMJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_4eHVAy5BSt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_iFwdghJizK <http://purl.org/artiamas/cm/object> _:UNIT_DmKBJNL2VA .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/action> _:ACT_bmJLLB6edL .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/alertMessage> "earned SA (via Proximity) on" .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/alertMessage> "earned SA (via Proximity) on" .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/PAUSE> .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/action> _:ACT_AGNjUoxJFH .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/action> _:ACT_GbNPw8xmcD .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/reason> <attack> .
+_:ACT_jujNUYtPoW <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Move> .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/action> _:ACT_Zq5qUhj7Pb .
+_:ACT_47g2xDLJuC <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EndFight> .
+_:ACT_WiSMLW2Z5p <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/alertMessage> "in DF range (fighting)" .
+_:ACT_U5zQ553TV2 <http://purl.org/artiamas/cm/time> "H+03:02" .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:UNIT_36F5Gm6NQc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/alertMessage> "planned battle removed.  No real targets." .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/grid> "38T PK 73728 36025" .
+_:ACT_Nv3k8jYKB7 <http://purl.org/artiamas/cm/alertMessage> "attacking (direct fire) ended" .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/action> _:ACT_Vqo6bkct7K .
+_:ACT_GbNPw8xmcD <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/action> _:ACT_ehQXAXrLfq .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/alertMessage> "  is paused at Crossing Control Point. Crossing is not traversable." .
+_:ACT_UteRhuVUXv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/StartFight> .
+_:ACT_WiSMLW2Z5p <http://purl.org/artiamas/cm/recipient> _:UNIT_gzGyyAG5cQ .
+_:ACT_WiSMLW2Z5p <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/sequence> "29"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:ACT_6Y2GnBL6HQ <http://purl.org/artiamas/cm/time> "H+08:07" .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/grid> "38T PK 72076 34942" .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/action> _:ACT_Nv3k8jYKB7 .
+_:ACT_Nv3k8jYKB7 <http://purl.org/artiamas/cm/sequence> "34"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/sequence> "15"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/sequence> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/grid> "38T PK 72089 34956" .
+_:ACT_3VDfYtcopj <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_TjMXxBrs79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MOVE> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_6Y2GnBL6HQ <http://purl.org/artiamas/cm/sequence> "35"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/sequence> "24"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_GbNPw8xmcD <http://purl.org/artiamas/cm/object> _:UNIT_8mrohcZQ8s .
+_:ACT_jsyXq3PLCx <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:ACT_bSEPDjpmas <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/alertMessage> "  is paused at crossing control point. crossing is not traversable." .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/time> "H+05:38" .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/grid> "38T PK 72356 35221" .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_nuTSSen2zJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/action> _:ACT_dGLnYWLWsR .
+_:ACT_47g2xDLJuC <http://purl.org/artiamas/cm/alertMessage> "attacking (direct fire) ended" .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/target> _:UNIT_WyQEYq9Lkm .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/time> "H+03:13" .
+_:UNIT_8mrohcZQ8s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:MSG_aieJCzd9jD <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/reason> "Crossing is not traversable" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_7zGRMMnpFY <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/grid> "38T PK 73207 36040" .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/alertMessage> "  is paused at crossing control point. crossing is not traversable." .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/sequence> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_bQcNxgNnxL <http://purl.org/artiamas/cm/sequence> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_JbM3WN8AuG <http://purl.org/artiamas/cm/alertMessage> "crossing task completed. units can cross." .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/RESUME> .
+_:ACT_ZVKVoHeKdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MOVE> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/target> _:UNIT_9CxDW6mYe3 .
+_:MSG_f5yXcMg3ey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/reason> "Crossing is not traversable" .
+_:ACT_47g2xDLJuC <http://purl.org/artiamas/cm/time> "H+05:48" .
+_:ACT_7zGRMMnpFY <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_WnHXiKR69Z <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/action> _:ACT_bQcNxgNnxL .
+_:MSG_ambQhkVa9j <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_GVy23Zs8kK <http://purl.org/artiamas/cm/sequence> "17"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/grid> "38T PK 72076 34942" .
+_:ACT_3VDfYtcopj <http://purl.org/artiamas/cm/sequence> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/target> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_S7hPbtwkXw <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/time> "H+03:13" .
+_:MSG_fhAwkriwaS <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/grid> "38T PK 76303 35204" .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/time> "H+05:49" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/sequence> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:UNIT_bkqvBvWRPZ <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/sequence> "27"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/grid> "38T PK 71506 34861" .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/grid> "38T PK 68497 35744" .
+_:ACT_F6vQRpmpdf <http://purl.org/artiamas/cm/sequence> "36"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/target> _:TASK_m3hVAfVVkG .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_jH5yPEQLrF <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/time> "H+08:07" .
+_:ACT_GbNPw8xmcD <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:ACT_3jJ52nDcFD <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/time> "H+03:54" .
+_:ACT_Amar5NMf7Q <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:ACT_bfqKiFhuSS <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/action> _:ACT_S7hPbtwkXw .
+_:UNIT_8mrohcZQ8s <http://www.w3.org/2000/01/rdf-schema#label> "1_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+_:MSG_VDiAbdmLwY <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:UNIT_9CxDW6mYe3 <http://www.w3.org/2000/01/rdf-schema#label> "B_CO_/_1_/_22_IN" .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/reason> "not going after opfor (out of assigned boundary)" .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/sequence> "35"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/time> "H+07:54" .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/sequence> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/alertMessage> "Crossing Task completed. Units can cross." .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_TjMXxBrs79 <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/sequence> "15"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Xc9gnEDLL4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/grid> "38T PK 72078 34945" .
+_:ACT_bVQW2giVkn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EarnedSA> .
+_:ACT_iFwdghJizK <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:ACT_VzaTRdJC9C <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_VB68PdB2ai <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_ej5JNeCCjb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/agent> _:UNIT_36F5Gm6NQc .
+_:ACT_U5zQ553TV2 <http://purl.org/artiamas/cm/object> _:UNIT_DmKBJNL2VA .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_3VDfYtcopj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/StartFight> .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/target> _:UNIT_LrasmpTkir .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_ZyrxSB9yfm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/alertMessage> "Movement is resumed" .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/time> "H+08:10" .
+_:ACT_jH5yPEQLrF <http://purl.org/artiamas/cm/time> "H+06:57" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:UNIT_DmKBJNL2VA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/target> _:TASK_m3hVAfVVkG .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/END> .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/sequence> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_bSEPDjpmas <http://purl.org/artiamas/cm/sequence> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_7zGRMMnpFY <http://purl.org/artiamas/cm/sequence> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_QMfoav3xoL <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:UNIT_JR8LKs2iZM <http://www.w3.org/2000/01/rdf-schema#label> "2_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_Nv3k8jYKB7 <http://purl.org/artiamas/cm/time> "H+07:54" .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/action> _:ACT_jH5yPEQLrF .
+_:ACT_VzaTRdJC9C <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/sequence> "37"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_JU4HRqpPwJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/grid> "38T PK 75785 36671" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:ACT_3r7yW5eX96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:ACT_jH5yPEQLrF <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/FUEL> .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/time> "H+08:10" .
+_:ACT_Amar5NMf7Q <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/sequence> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/alertMessage> "planned battle removed.  no real targets." .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:ACT_Duuti5hDP6 <http://purl.org/artiamas/cm/object> _:UNIT_8mrohcZQ8s .
+_:ACT_3jJ52nDcFD <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Engage> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/target> _:UNIT_bkqvBvWRPZ .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/action> _:ACT_TsyDvfKafK .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_TjMXxBrs79 <http://purl.org/artiamas/cm/object> _:TASK_m3hVAfVVkG .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/sequence> "27"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/sequence> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/action> _:ACT_VAkFoAHUn9 .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/grid> "38T PK 76303 35204" .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/time> "H+06:28" .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/alertMessage> "not going after OPFOR (out of assigned boundary)" .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/alertMessage> "attacking (Direct Fire) against" .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/sequence> "37"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_UteRhuVUXv <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:ACT_47g2xDLJuC <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:UNIT_DmKBJNL2VA <http://www.w3.org/2000/01/rdf-schema#label> "3_1_CO_(TRK)_/_1_BN_/_241_INF_BDE_(TM)" .
+_:ACT_VAkFoAHUn9 <http://purl.org/artiamas/cm/sequence> "18"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_TsyDvfKafK <http://purl.org/artiamas/cm/object> _:UNIT_8mrohcZQ8s .
+_:TASK_m3hVAfVVkG <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CrossingTask> .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_S7hPbtwkXw <http://purl.org/artiamas/cm/object> _:UNIT_DmKBJNL2VA .
+_:UNIT_WyQEYq9Lkm <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:ACT_U5zQ553TV2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EarnedSA> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/sequence> "32"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/grid> "38T PK 73790 35980" .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/alertMessage> "not going after opfor (out of assigned boundary)" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_YZv9yDLstx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_U5zQ553TV2 <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:UNIT_bkqvBvWRPZ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/target> _:UNIT_9CxDW6mYe3 .
+_:ACT_VAkFoAHUn9 <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/FUEL> .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/action> _:ACT_UwFu3QLMMU .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/action> _:ACT_Amar5NMf7Q .
+_:MSG_8a5WefSoDP <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_bQcNxgNnxL <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:ACT_dGLnYWLWsR <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Move> .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/time> "H+03:02" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/sequence> "28"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:MSG_aWFSJpSSgJ <http://purl.org/artiamas/cm/time> "H+02:42" .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_85U3XmrQtn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/TaskReport> .
+_:ACT_jujNUYtPoW <http://purl.org/artiamas/cm/subject> _:UNIT_bkqvBvWRPZ .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/sequence> "31"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_jsyXq3PLCx <http://purl.org/artiamas/cm/sequence> "32"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/action> _:ACT_3jJ52nDcFD .
+_:ACT_bQcNxgNnxL <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/sequence> "18"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/target> _:UNIT_DmKBJNL2VA .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/target> _:UNIT_gzGyyAG5cQ .
+_:ACT_JbM3WN8AuG <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/TaskReport> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/grid> "38T PK 76263 35438" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/target> _:UNIT_bkqvBvWRPZ .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/sequence> "26"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/grid> "38T PK 73485 36133" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:TASK_m3hVAfVVkG <http://purl.org/artiamas/cm/lastMessage> _:MSG_fQoz2YTiVq .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/time> "H+04:05" .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/grid> "38T PK 73476 36148" .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/time> "H+04:05" .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/grid> "38T PK 72350 35215" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/action> _:ACT_5Fy9ky2GWd .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/alertMessage> "not going after OPFOR (out of assigned boundary)" .
+_:MSG_BPDDxy8XNx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/UNABLE> .
+_:MSG_ambQhkVa9j <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/action> _:ACT_27JirR9yJu .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/grid> "38T PK 73550 36020" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/agent> _:UNIT_WyQEYq9Lkm .
+_:UNIT_CCCeEBgXpJ <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:MSG_V7ncNAxyTZ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_SZWBipzRTP <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_5Fy9ky2GWd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_6Y2GnBL6HQ <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/reason> "need reinforcements" .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/reason> "Crossing is not traversable" .
+_:ACT_Nv3k8jYKB7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/EndFight> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_JbM3WN8AuG <http://purl.org/artiamas/cm/subject> _:UNIT_36F5Gm6NQc .
+_:MSG_nuTSSen2zJ <http://purl.org/artiamas/cm/sequence> "28"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/target> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/target> _:TASK_m3hVAfVVkG .
+_:ACT_Zq5qUhj7Pb <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire. firing has stopped" .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/sequence> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/action> _:ACT_2TgdeiXnFQ .
+_:ACT_ZVKVoHeKdf <http://purl.org/artiamas/cm/object> _:TASK_m3hVAfVVkG .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/level> "FLASH" .
+_:ACT_F6vQRpmpdf <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire ended" .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_UteRhuVUXv <http://purl.org/artiamas/cm/alertMessage> "in df range (fighting)" .
+_:ACT_ax9D6DDk9E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:UNIT_JR8LKs2iZM <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:UNIT_9CxDW6mYe3 <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/alertMessage> "not going after OPFOR (out of assigned boundary)" .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/alertMessage> "not going after opfor (out of assigned boundary)" .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_UwFu3QLMMU <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/sequence> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/time> "H+05:38" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:ACT_jsyXq3PLCx <http://purl.org/artiamas/cm/object> _:UNIT_JR8LKs2iZM .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/action> _:ACT_U5zQ553TV2 .
+_:ACT_UwFu3QLMMU <http://purl.org/artiamas/cm/recipient> _:UNIT_WyQEYq9Lkm .
+_:ACT_Nv3k8jYKB7 <http://purl.org/artiamas/cm/toward> _:UNIT_JR8LKs2iZM .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/alertMessage> "moving to fight" .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/alertMessage> "  is paused at crossing control point. crossing is not traversable." .
+_:ACT_Vqo6bkct7K <http://purl.org/artiamas/cm/time> "H+06:58" .
+_:ACT_UwFu3QLMMU <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_UwFu3QLMMU <http://purl.org/artiamas/cm/sequence> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_47g2xDLJuC <http://purl.org/artiamas/cm/sequence> "19"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/time> "H+07:12" .
+_:ACT_bQcNxgNnxL <http://purl.org/artiamas/cm/recipient> _:UNIT_9CxDW6mYe3 .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/sequence> "16"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/action> _:ACT_ej5JNeCCjb .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/grid> "38T PK 77676 34907" .
+_:ACT_ehQXAXrLfq <http://purl.org/artiamas/cm/sequence> "24"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fwTzZQ4Smr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:MSG_f89Ffx3Gq5 <http://purl.org/artiamas/cm/action> _:ACT_jsyXq3PLCx .
+_:MSG_8Pdphp8qfN <http://purl.org/artiamas/cm/action> _:ACT_7zGRMMnpFY .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/alertMessage> "Crossing Task has started." .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/sequence> "30"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_2TgdeiXnFQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/StartFight> .
+_:ACT_GVy23Zs8kK <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:ACT_bVQW2giVkn <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/grid> "38T PK 73790 35980" .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/target> _:UNIT_9CxDW6mYe3 .
+_:UNIT_LrasmpTkir <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:ACT_3VDfYtcopj <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:ACT_bQcNxgNnxL <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:ACT_Amar5NMf7Q <http://purl.org/artiamas/cm/sequence> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_cpcuYChjpF <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:ACT_jH5yPEQLrF <http://purl.org/artiamas/cm/recipient> _:UNIT_9CxDW6mYe3 .
+_:ACT_VAkFoAHUn9 <http://purl.org/artiamas/cm/recipient> _:UNIT_bkqvBvWRPZ .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_8a5WefSoDP <http://purl.org/artiamas/cm/time> "H+05:40" .
+_:ACT_WiSMLW2Z5p <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_XdqazvXjeD <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_egQtJzFHx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_5gbH7twSvk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_iFwdghJizK <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Engage> .
+_:MSG_V7ncNAxyTZ <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_bfqKiFhuSS <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_fCvXjxFcxV <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:UNIT_36F5Gm6NQc <http://purl.org/artiamas/cm/force> <http://purl.org/artiamas/cm/BLUE> .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/sequence> "33"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_f5yXcMg3ey <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/action> _:ACT_QMfoav3xoL .
+_:ACT_TsyDvfKafK <http://purl.org/artiamas/cm/sequence> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/action> _:ACT_cpcuYChjpF .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/agent> <http://purl.org/artiamas/cm/NONE> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/alertMessage> "attacking (Direct Fire) ended" .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/time> "H+06:17" .
+_:ACT_ej5JNeCCjb <http://purl.org/artiamas/cm/action> _:ACT_Duuti5hDP6 .
+_:ACT_MmDFVMbTte <http://purl.org/artiamas/cm/time> "H+06:54" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/time> "H+05:49" .
+_:MSG_4Vb84jgjEt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_27JirR9yJu <http://purl.org/artiamas/cm/time> "H+06:28" .
+_:ACT_85U3XmrQtn <http://purl.org/artiamas/cm/time> "H+06:07" .
+_:MSG_fQoz2YTiVq <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_F6vQRpmpdf <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/NONE> .
+_:ACT_WiSMLW2Z5p <http://purl.org/artiamas/cm/sequence> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_F6vQRpmpdf <http://purl.org/artiamas/cm/time> "H+08:10" .
+_:ACT_VAkFoAHUn9 <http://purl.org/artiamas/cm/time> "H+05:44" .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/messageType> "LOG" .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/target> _:UNIT_DmKBJNL2VA .
+_:ACT_6Y2GnBL6HQ <http://purl.org/artiamas/cm/alertMessage> "receiving (artillery) fire" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/grid> "38T PK 72329 35195" .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/grid> "38T PK 74229 36332" .
+_:ACT_WiSMLW2Z5p <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/time> "H+06:54" .
+_:ACT_Vqo6bkct7K <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:MSG_5g9Ao8pqPC <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:UNIT_CCCeEBgXpJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MilitaryUnit> .
+_:ACT_7zGRMMnpFY <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/time> "H+06:25" .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:UNIT_LrasmpTkir <http://www.w3.org/2000/01/rdf-schema#label> "D_CO_/_1_/_22_IN" .
+_:MSG_J9fWTvAvQ3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:ACT_bSEPDjpmas <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/AMMO> .
+_:MSG_f89Ffx3Gq5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_GbNPw8xmcD <http://purl.org/artiamas/cm/alertMessage> "attacking (direct fire) against" .
+_:MSG_JU4HRqpPwJ <http://purl.org/artiamas/cm/sequence> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/reason> <attack> .
+_:ACT_AGNjUoxJFH <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/grid> "38T PK 72165 35037" .
+_:ACT_bmJLLB6edL <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:ACT_MmDFVMbTte <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Report> .
+_:ACT_3VDfYtcopj <http://purl.org/artiamas/cm/alertMessage> "in df range (fighting)" .
+_:ACT_Amar5NMf7Q <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Resupply> .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/sequence> "22"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Hb8qwAELMJ <http://purl.org/artiamas/cm/action> _:ACT_6Y2GnBL6HQ .
+_:MSG_aieJCzd9jD <http://purl.org/artiamas/cm/grid> "38T PK 54455 31282" .
+_:MSG_64AHQhkuqM <http://purl.org/artiamas/cm/time> "H+05:06" .
+_:ACT_bSEPDjpmas <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [logpac] (ammo)" .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:UNIT_gzGyyAG5cQ <http://www.w3.org/2000/01/rdf-schema#label> "C_CO_/_1_/_22_IN" .
+_:ACT_TsyDvfKafK <http://purl.org/artiamas/cm/time> "H+02:42" .
+_:ACT_2TgdeiXnFQ <http://purl.org/artiamas/cm/toward> _:UNIT_JR8LKs2iZM .
+_:ACT_VAkFoAHUn9 <http://purl.org/artiamas/cm/alertMessage> "log resupply [thin air] [low] (fuel) delivered to" .
+_:MSG_YZv9yDLstx <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_Lr3vu3YfGp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:ACT_3VDfYtcopj <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/reason> <attack> .
+_:ACT_dGLnYWLWsR <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:ACT_bmJLLB6edL <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/MOVE> .
+_:MSG_5g9Ao8pqPC <http://purl.org/artiamas/cm/action> _:ACT_UteRhuVUXv .
+_:MSG_4Vb84jgjEt <http://purl.org/artiamas/cm/sequence> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_BPDDxy8XNx <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:ACT_bfqKiFhuSS <http://purl.org/artiamas/cm/object> <http://purl.org/artiamas/cm/FUEL> .
+_:ACT_GbNPw8xmcD <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/Attack> .
+_:MSG_WnHXiKR69Z <http://purl.org/artiamas/cm/sequence> "22"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_fwTzZQ4Smr <http://purl.org/artiamas/cm/time> "H+05:44" .
+_:MSG_Lr3vu3YfGp <http://purl.org/artiamas/cm/sequence> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_Xc9gnEDLL4 <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:MSG_nyDbqS88US <http://purl.org/artiamas/cm/sequence> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/target> _:TASK_m3hVAfVVkG .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:ACT_3r7yW5eX96 <http://purl.org/artiamas/cm/sequence> "16"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:ACT_7zGRMMnpFY <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:ACT_bVQW2giVkn <http://purl.org/artiamas/cm/alertMessage> "earned sa (via proximity) on" .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/nextMessage> _:MSG_JU4HRqpPwJ .
+_:MSG_SZWBipzRTP <http://purl.org/artiamas/cm/level> "ROUTINE" .
+_:MSG_TDwSHiqJoK <http://purl.org/artiamas/cm/grid> "38T PK 76496 33357" .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_J9fWTvAvQ3 <http://purl.org/artiamas/cm/sequence> "36"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:MSG_egQtJzFHx7 <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:MSG_5gbH7twSvk <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_Nv3k8jYKB7 <http://purl.org/artiamas/cm/subject> _:UNIT_WyQEYq9Lkm .
+_:MSG_XdqazvXjeD <http://purl.org/artiamas/cm/action> _:ACT_bVQW2giVkn .
+_:ACT_bfqKiFhuSS <http://purl.org/artiamas/cm/time> "H+06:22" .
+_:MSG_8Pdphp8qfN <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/artiamas/cm/CombatMessage> .
+_:MSG_fhAwkriwaS <http://purl.org/artiamas/cm/alertMessage> "Log resupply [thin air] [LOGPAC] (ammo)" .
+_:ACT_iXhyYuoVLA <http://purl.org/artiamas/cm/toward> _:UNIT_8mrohcZQ8s .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/time> "H+06:07" .
+_:MSG_VB68PdB2ai <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_fCvXjxFcxV <http://purl.org/artiamas/cm/task> _:TASK_m3hVAfVVkG .
+_:ACT_Amar5NMf7Q <http://purl.org/artiamas/cm/time> "H+03:00" .
+_:MSG_4eHVAy5BSt <http://purl.org/artiamas/cm/time> "H+06:58" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/agent> _:UNIT_9CxDW6mYe3 .
+_:ACT_85U3XmrQtn <http://purl.org/artiamas/cm/alertMessage> "crossing task has started." .
+_:MSG_C3aUHbvdTx <http://purl.org/artiamas/cm/grid> "38T PK 73790 35980" .
+_:MSG_arrApdZAtz <http://purl.org/artiamas/cm/target> _:UNIT_8mrohcZQ8s .
+_:MSG_ZyrxSB9yfm <http://purl.org/artiamas/cm/messageType> "COMBAT" .
+_:MSG_VDiAbdmLwY <http://purl.org/artiamas/cm/agent> _:UNIT_bkqvBvWRPZ .
+_:ACT_QMfoav3xoL <http://purl.org/artiamas/cm/subject> _:UNIT_9CxDW6mYe3 .
+_:MSG_GQxXjNHLV9 <http://purl.org/artiamas/cm/messageType> "INFO" .
+_:ACT_5Fy9ky2GWd <http://purl.org/artiamas/cm/Status> <http://purl.org/artiamas/cm/PAUSE> .
 
