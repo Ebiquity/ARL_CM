@@ -117,6 +117,12 @@
         rdfs:range :MilitaryUnit .
 
 
+###  http://purl.org/artiamas/cm/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :MilitaryUnit ;
+        rdfs:range :MilitaryUnit .
+
+
 ###  http://purl.org/artiamas/cm/status
 :status rdf:type owl:ObjectProperty ;
         rdfs:domain :Report ;
@@ -242,7 +248,7 @@
 
 ###  http://purl.org/artiamas/cm/DirectFire
 :DirectFire rdf:type owl:Class ;
-            rdfs:subClassOf :Attack .
+            rdfs:subClassOf :Engage .
 
 
 ###  http://purl.org/artiamas/cm/END
@@ -263,11 +269,6 @@
 ###  http://purl.org/artiamas/cm/Engage
 :Engage rdf:type owl:Class ;
         rdfs:subClassOf :Action .
-
-
-###  http://purl.org/artiamas/cm/Engineering
-:Engineering rdf:type owl:Class ;
-             rdfs:subClassOf :RoleType .
 
 
 ###  http://purl.org/artiamas/cm/EngineeringCompany
@@ -314,11 +315,6 @@
 
 ###  http://purl.org/artiamas/cm/Mission
 :Mission rdf:type owl:Class .
-
-
-###  http://purl.org/artiamas/cm/Mortar
-:Mortar rdf:type owl:Class ;
-        rdfs:subClassOf :RoleType .
 
 
 ###  http://purl.org/artiamas/cm/MortarPlatoon
@@ -377,10 +373,6 @@
           rdfs:subClassOf :Action .
 
 
-###  http://purl.org/artiamas/cm/RoleType
-:RoleType rdf:type owl:Class .
-
-
 ###  http://purl.org/artiamas/cm/START
 :START rdf:type owl:Class ;
        rdfs:subClassOf :ActionStatus .
@@ -391,9 +383,8 @@
               rdfs:subClassOf :Platoon .
 
 
-###  http://purl.org/artiamas/cm/Scouting
-:Scouting rdf:type owl:Class ;
-          rdfs:subClassOf :RoleType .
+###  http://purl.org/artiamas/cm/Simulation
+:Simulation rdf:type owl:Class .
 
 
 ###  http://purl.org/artiamas/cm/Squad
