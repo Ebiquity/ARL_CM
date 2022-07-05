@@ -29,11 +29,7 @@
 
 ###  http://purl.org/artiamas/cm/agent
 :agent rdf:type owl:ObjectProperty ;
-       rdfs:domain [ rdf:type owl:Class ;
-                     owl:unionOf ( :Action
-                                   :Message
-                                 )
-                   ] ;
+       rdfs:domain :Message ;
        rdfs:range :MilitaryUnit .
 
 
@@ -114,6 +110,11 @@
         rdfs:comment "A instance representing the a Report's action.  One of START, END, PAUSE, UNABLE, ..." .
 
 
+###  http://purl.org/artiamas/cm/target
+:target rdf:type owl:ObjectProperty ;
+        rdfs:domain :Message .
+
+
 ###  http://purl.org/artiamas/cm/task
 :task rdf:type owl:ObjectProperty ;
       rdfs:domain [ rdf:type owl:Class ;
@@ -133,10 +134,6 @@
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/artiamas/cm/agent
-:agent rdf:type owl:DatatypeProperty .
-
 
 ###  http://purl.org/artiamas/cm/alertMessage
 :alertMessage rdf:type owl:DatatypeProperty ;
@@ -180,10 +177,6 @@
           rdfs:range xsd:string .
 
 
-###  http://purl.org/artiamas/cm/target
-:target rdf:type owl:DatatypeProperty .
-
-
 ###  http://purl.org/artiamas/cm/time
 :time rdf:type owl:DatatypeProperty ;
       rdfs:domain :MessageOrAction ;
@@ -195,8 +188,7 @@
 #################################################################
 
 ###  http://purl.org/artiamas/cm/Action
-:Action rdf:type owl:Class ;
-        rdfs:subClassOf :MessageOrAction .
+:Action rdf:type owl:Class .
 
 
 ###  http://purl.org/artiamas/cm/ActionStatus
@@ -287,8 +279,7 @@
 
 
 ###  http://purl.org/artiamas/cm/Message
-:Message rdf:type owl:Class ;
-         rdfs:subClassOf :MessageOrAction .
+:Message rdf:type owl:Class .
 
 
 ###  http://purl.org/artiamas/cm/MessageOrAction
