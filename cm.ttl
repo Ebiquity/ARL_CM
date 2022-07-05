@@ -55,6 +55,10 @@
        rdfs:range :Force .
 
 
+###  http://purl.org/artiamas/cm/isa
+:isa rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.org/artiamas/cm/lastAction
 :lastAction rdf:type owl:ObjectProperty ;
             rdfs:domain :Task ;
