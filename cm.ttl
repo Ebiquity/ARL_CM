@@ -117,18 +117,7 @@
 
 ###  http://purl.org/artiamas/cm/task
 :task rdf:type owl:ObjectProperty ;
-      rdfs:domain [ rdf:type owl:Class ;
-                    owl:unionOf ( :Action
-                                  :Message
-                                )
-                  ] ;
       rdfs:range :Task .
-
-
-###  http://purl.org/artiamas/cm/unitOf
-:unitOf rdf:type owl:ObjectProperty ;
-        rdfs:domain :MilitaryUnit ;
-        rdfs:range :MilitaryUnit .
 
 
 #################################################################
