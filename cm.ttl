@@ -137,7 +137,6 @@
 
 ###  http://purl.org/artiamas/cm/alertMessage
 :alertMessage rdf:type owl:DatatypeProperty ;
-              rdfs:domain :MessageOrAction ;
               rdfs:range xsd:string ;
               rdfs:comment "The string that describes an action" .
 
@@ -173,13 +172,11 @@
 
 ###  http://purl.org/artiamas/cm/sequence
 :sequence rdf:type owl:DatatypeProperty ;
-          rdfs:domain :MessageOrAction ;
           rdfs:range xsd:string .
 
 
 ###  http://purl.org/artiamas/cm/time
 :time rdf:type owl:DatatypeProperty ;
-      rdfs:domain :MessageOrAction ;
       rdfs:range xsd:string .
 
 
