@@ -130,6 +130,10 @@
               rdfs:comment "The string that describes an action" .
 
 
+###  http://purl.org/artiamas/cm/endTime
+:endTime rdf:type owl:DatatypeProperty .
+
+
 ###  http://purl.org/artiamas/cm/grid
 :grid rdf:type owl:DatatypeProperty .
 
@@ -162,6 +166,10 @@
 ###  http://purl.org/artiamas/cm/sequence
 :sequence rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string .
+
+
+###  http://purl.org/artiamas/cm/startTime
+:startTime rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/artiamas/cm/time
