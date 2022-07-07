@@ -103,13 +103,6 @@
         rdfs:range :MilitaryUnit .
 
 
-###  http://purl.org/artiamas/cm/status
-:status rdf:type owl:ObjectProperty ;
-        rdfs:domain :Report ;
-        rdfs:range :ActionStatus ;
-        rdfs:comment "A instance representing the a Report's action.  One of START, END, PAUSE, UNABLE, ..." .
-
-
 ###  http://purl.org/artiamas/cm/target
 :target rdf:type owl:ObjectProperty ;
         rdfs:domain :Message .
@@ -172,6 +165,11 @@
 :startTime rdf:type owl:DatatypeProperty .
 
 
+###  http://purl.org/artiamas/cm/status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+
 ###  http://purl.org/artiamas/cm/time
 :time rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:string .
@@ -183,10 +181,6 @@
 
 ###  http://purl.org/artiamas/cm/Action
 :Action rdf:type owl:Class .
-
-
-###  http://purl.org/artiamas/cm/ActionStatus
-:ActionStatus rdf:type owl:Class .
 
 
 ###  http://purl.org/artiamas/cm/Attack
@@ -230,11 +224,6 @@
 ###  http://purl.org/artiamas/cm/DirectFire
 :DirectFire rdf:type owl:Class ;
             rdfs:subClassOf :Engage .
-
-
-###  http://purl.org/artiamas/cm/END
-:END rdf:type owl:Class ;
-     rdfs:subClassOf :ActionStatus .
 
 
 ###  http://purl.org/artiamas/cm/EarnSA
@@ -305,20 +294,10 @@
       rdfs:subClassOf :MilitaryUnit .
 
 
-###  http://purl.org/artiamas/cm/PAUSE
-:PAUSE rdf:type owl:Class ;
-       rdfs:subClassOf :ActionStatus .
-
-
 ###  http://purl.org/artiamas/cm/Platoon
 :Platoon rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
          :wikidata <https://www.wikidata.org/wiki/Q304673> .
-
-
-###  http://purl.org/artiamas/cm/RESUME
-:RESUME rdf:type owl:Class ;
-        rdfs:subClassOf :ActionStatus .
 
 
 ###  http://purl.org/artiamas/cm/Regiment
@@ -343,11 +322,6 @@
 ###  http://purl.org/artiamas/cm/Resupply
 :Resupply rdf:type owl:Class ;
           rdfs:subClassOf :Action .
-
-
-###  http://purl.org/artiamas/cm/START
-:START rdf:type owl:Class ;
-       rdfs:subClassOf :ActionStatus .
 
 
 ###  http://purl.org/artiamas/cm/ScoutPlatoon
@@ -386,11 +360,6 @@
 ###  http://purl.org/artiamas/cm/TaskReport
 :TaskReport rdf:type owl:Class ;
             rdfs:subClassOf :Action .
-
-
-###  http://purl.org/artiamas/cm/UNABLE
-:UNABLE rdf:type owl:Class ;
-        rdfs:subClassOf :ActionStatus .
 
 
 #################################################################
