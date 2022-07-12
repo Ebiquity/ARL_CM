@@ -1,5 +1,5 @@
 @prefix : <http://purl.org/artiamas/cm/> .
-@prefix wd: <http://www.wikidata.org/wiki/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -191,7 +191,7 @@
 ###  http://purl.org/artiamas/cm/Battalion
 :Battalion rdf:type owl:Class ;
            rdfs:subClassOf :MilitaryUnit ;
-           :wikidata <https://www.wikidata.org/wiki/Q6382533> .
+           :wikidata wd:Q6382533 .
 
 
 ###  http://purl.org/artiamas/cm/BridgingMission
@@ -202,7 +202,7 @@
 ###  http://purl.org/artiamas/cm/Brigade
 :Brigade rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata <https://www.wikidata.org/wiki/Q102356> .
+         :wikidata wd:Q102356 .
 
 
 ###  http://purl.org/artiamas/cm/CombatMission
@@ -213,7 +213,7 @@
 ###  http://purl.org/artiamas/cm/Company
 :Company rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata <https://www.wikidata.org/wiki/Q102538> .
+         :wikidata wd:Q102538 .
 
 
 ###  http://purl.org/artiamas/cm/CrossingTask
@@ -229,6 +229,11 @@
 ###  http://purl.org/artiamas/cm/EarnSA
 :EarnSA rdf:type owl:Class ;
         rdfs:subClassOf :Action .
+
+
+###  http://purl.org/artiamas/cm/EarnedSA
+:EarnedSA rdf:type owl:Class ;
+          rdfs:subClassOf :Action .
 
 
 ###  http://purl.org/artiamas/cm/EndFight
@@ -261,6 +266,11 @@
                   owl:disjointWith :TankRegiment .
 
 
+###  http://purl.org/artiamas/cm/LostSA
+:LostSA rdf:type owl:Class ;
+        rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/Message
 :Message rdf:type owl:Class .
 
@@ -271,7 +281,7 @@
 
 ###  http://purl.org/artiamas/cm/MilitaryUnit
 :MilitaryUnit rdf:type owl:Class ;
-              rdfs:seeAlso wd:Q176799 .
+              :wikidata wd:Q176799 .
 
 
 ###  http://purl.org/artiamas/cm/Mission
@@ -281,7 +291,7 @@
 ###  http://purl.org/artiamas/cm/MortarPlatoon
 :MortarPlatoon rdf:type owl:Class ;
                rdfs:subClassOf :Platoon ;
-               :wikidata <https://www.wikidata.org/wiki/Q47317560> .
+               :wikidata wd:Q47317560 .
 
 
 ###  http://purl.org/artiamas/cm/Move
@@ -297,13 +307,13 @@
 ###  http://purl.org/artiamas/cm/Platoon
 :Platoon rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata <https://www.wikidata.org/wiki/Q304673> .
+         :wikidata wd:Q304673 .
 
 
 ###  http://purl.org/artiamas/cm/Regiment
 :Regiment rdf:type owl:Class ;
           rdfs:subClassOf :MilitaryUnit ;
-          :wikidata <https://www.wikidata.org/wiki/Q52371> .
+          :wikidata wd:Q52371 .
 
 
 ###  http://purl.org/artiamas/cm/RegimentOrBrigade
@@ -336,7 +346,7 @@
 ###  http://purl.org/artiamas/cm/Squad
 :Squad rdf:type owl:Class ;
        rdfs:subClassOf :MilitaryUnit ;
-       :wikidata <https://www.wikidata.org/wiki/Q207063> .
+       :wikidata wd:Q207063 .
 
 
 ###  http://purl.org/artiamas/cm/StartFight
