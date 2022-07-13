@@ -185,7 +185,7 @@
 
 ###  http://purl.org/artiamas/cm/Attack
 :Attack rdf:type owl:Class ;
-        rdfs:subClassOf :Engage .
+        rdfs:subClassOf :Action .
 
 
 ###  http://purl.org/artiamas/cm/Battalion
@@ -216,14 +216,24 @@
          :wikidata wd:Q102538 .
 
 
+###  http://purl.org/artiamas/cm/Crossing
+:Crossing rdf:type owl:Class ;
+          rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/CrossingTask
 :CrossingTask rdf:type owl:Class ;
               rdfs:subClassOf :Task .
 
 
+###  http://purl.org/artiamas/cm/Detect
+:Detect rdf:type owl:Class ;
+        rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/DirectFire
 :DirectFire rdf:type owl:Class ;
-            rdfs:subClassOf :Engage .
+            rdfs:subClassOf :Action .
 
 
 ###  http://purl.org/artiamas/cm/EarnSA
@@ -243,7 +253,8 @@
 
 ###  http://purl.org/artiamas/cm/Engage
 :Engage rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        :wikidata <https://www.wikidata.org/wiki/Q48767773> .
 
 
 ###  http://purl.org/artiamas/cm/EngineeringCompany
@@ -302,6 +313,11 @@
 ###  http://purl.org/artiamas/cm/NONE
 :NONE rdf:type owl:Class ;
       rdfs:subClassOf :MilitaryUnit .
+
+
+###  http://purl.org/artiamas/cm/Obstacle
+:Obstacle rdf:type owl:Class ;
+          :wikidata <https://www.wikidata.org/wiki/Q264661> .
 
 
 ###  http://purl.org/artiamas/cm/Platoon
