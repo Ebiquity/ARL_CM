@@ -180,12 +180,14 @@
 #################################################################
 
 ###  http://purl.org/artiamas/cm/Action
-:Action rdf:type owl:Class .
+:Action rdf:type owl:Class ;
+        rdfs:label "action" .
 
 
 ###  http://purl.org/artiamas/cm/Attack
 :Attack rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        rdfs:label "attack" .
 
 
 ###  http://purl.org/artiamas/cm/Battalion
@@ -218,7 +220,8 @@
 
 ###  http://purl.org/artiamas/cm/Crossing
 :Crossing rdf:type owl:Class ;
-          rdfs:subClassOf :Action .
+          rdfs:subClassOf :Action ;
+          rdfs:label "crossing" .
 
 
 ###  http://purl.org/artiamas/cm/CrossingTask
@@ -228,33 +231,33 @@
 
 ###  http://purl.org/artiamas/cm/Detect
 :Detect rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        rdfs:label "detect" .
 
 
 ###  http://purl.org/artiamas/cm/DirectFire
 :DirectFire rdf:type owl:Class ;
-            rdfs:subClassOf :Action .
+            rdfs:subClassOf :Action ;
+            rdfs:label "directFire" .
 
 
 ###  http://purl.org/artiamas/cm/EarnSA
 :EarnSA rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
-
-
-###  http://purl.org/artiamas/cm/EarnedSA
-:EarnedSA rdf:type owl:Class ;
-          rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        rdfs:label "earnSA" .
 
 
 ###  http://purl.org/artiamas/cm/EndFight
 :EndFight rdf:type owl:Class ;
-          rdfs:subClassOf :Action .
+          rdfs:subClassOf :Action ;
+          rdfs:label "endFight" .
 
 
 ###  http://purl.org/artiamas/cm/Engage
 :Engage rdf:type owl:Class ;
         rdfs:subClassOf :Action ;
-        :wikidata <https://www.wikidata.org/wiki/Q48767773> .
+        :wikidata <https://www.wikidata.org/wiki/Q48767773> ;
+        rdfs:label "engage" .
 
 
 ###  http://purl.org/artiamas/cm/EngineeringCompany
@@ -279,7 +282,8 @@
 
 ###  http://purl.org/artiamas/cm/LostSA
 :LostSA rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        rdfs:label "lostSA" .
 
 
 ###  http://purl.org/artiamas/cm/Message
@@ -307,7 +311,8 @@
 
 ###  http://purl.org/artiamas/cm/Move
 :Move rdf:type owl:Class ;
-      rdfs:subClassOf :Action .
+      rdfs:subClassOf :Action ;
+      rdfs:label "move" .
 
 
 ###  http://purl.org/artiamas/cm/NONE
@@ -342,12 +347,14 @@
 
 ###  http://purl.org/artiamas/cm/Report
 :Report rdf:type owl:Class ;
-        rdfs:subClassOf :Action .
+        rdfs:subClassOf :Action ;
+        rdfs:label "report" .
 
 
 ###  http://purl.org/artiamas/cm/Resupply
 :Resupply rdf:type owl:Class ;
-          rdfs:subClassOf :Action .
+          rdfs:subClassOf :Action ;
+          rdfs:label "resupply" .
 
 
 ###  http://purl.org/artiamas/cm/ScoutPlatoon
@@ -367,7 +374,8 @@
 
 ###  http://purl.org/artiamas/cm/StartFight
 :StartFight rdf:type owl:Class ;
-            rdfs:subClassOf :Action .
+            rdfs:subClassOf :Action ;
+            rdfs:label "startFight" .
 
 
 ###  http://purl.org/artiamas/cm/Supplies
@@ -385,7 +393,8 @@
 
 ###  http://purl.org/artiamas/cm/TaskReport
 :TaskReport rdf:type owl:Class ;
-            rdfs:subClassOf :Action .
+            rdfs:subClassOf :Action ;
+            rdfs:label "taskReport" .
 
 
 #################################################################
