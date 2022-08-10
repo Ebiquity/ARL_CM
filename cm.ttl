@@ -13,6 +13,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/artiamas/cm/amr
+:amr rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/artiamas/cm/wikidata
 :wikidata rdf:type owl:AnnotationProperty .
 
@@ -43,12 +47,6 @@
 :firstMessage rdf:type owl:ObjectProperty ;
               rdfs:domain :Task ;
               rdfs:range :Message .
-
-
-###  http://purl.org/artiamas/cm/force
-:force rdf:type owl:ObjectProperty ;
-       rdfs:domain :Message ;
-       rdfs:range :Force .
 
 
 ###  http://purl.org/artiamas/cm/isa
@@ -113,6 +111,12 @@
       rdfs:range :Task .
 
 
+###  http://purl.org/artiamas/cm/toward
+:toward rdf:type owl:ObjectProperty ;
+        rdfs:domain :Move ;
+        :wikidata "toward" .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -123,8 +127,30 @@
               rdfs:comment "The string that describes an action" .
 
 
+###  http://purl.org/artiamas/cm/amr
+:amr rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Action ;
+     rdfs:range xsd:string .
+
+
 ###  http://purl.org/artiamas/cm/endTime
 :endTime rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/artiamas/cm/force
+:force rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :MilitaryUnit ;
+       rdfs:range [ rdf:type rdfs:Datatype ;
+                    owl:oneOf [ rdf:type rdf:List ;
+                                rdf:first "blue" ;
+                                rdf:rest [ rdf:type rdf:List ;
+                                           rdf:first "red" ;
+                                           rdf:rest rdf:nil
+                                         ]
+                              ]
+                  ] ;
+       rdfs:comment "" .
 
 
 ###  http://purl.org/artiamas/cm/grid
@@ -158,7 +184,7 @@
 
 ###  http://purl.org/artiamas/cm/sequence
 :sequence rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:positiveInteger .
 
 
 ###  http://purl.org/artiamas/cm/startTime
@@ -184,16 +210,35 @@
         rdfs:label "action" .
 
 
+###  http://purl.org/artiamas/cm/Ammo
+:Ammo rdf:type owl:Class ;
+      rdfs:subClassOf :Supplies ;
+      :wikidata "https://www.wikidata.org/wiki/Q185785" ;
+      rdfs:label "ammo" .
+
+
 ###  http://purl.org/artiamas/cm/Attack
 :Attack rdf:type owl:Class ;
-        rdfs:subClassOf :Action ;
+        rdfs:subClassOf :HostileAction ;
         rdfs:label "attack" .
 
 
 ###  http://purl.org/artiamas/cm/Battalion
 :Battalion rdf:type owl:Class ;
            rdfs:subClassOf :MilitaryUnit ;
-           :wikidata wd:Q6382533 .
+           :wikidata wd:Q6382533 ;
+           rdfs:label "Battalion" .
+
+
+###  http://purl.org/artiamas/cm/Blue
+:Blue rdf:type owl:Class ;
+      rdfs:subClassOf :Force .
+
+
+###  http://purl.org/artiamas/cm/BlueSupplyUnit
+:BlueSupplyUnit rdf:type owl:Class ;
+                rdfs:subClassOf :SupplyUnit ;
+                rdfs:label "blue supply unit" .
 
 
 ###  http://purl.org/artiamas/cm/BridgingMission
@@ -204,18 +249,34 @@
 ###  http://purl.org/artiamas/cm/Brigade
 :Brigade rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata wd:Q102356 .
+         :wikidata wd:Q102356 ;
+         rdfs:label "Brigade" .
+
+
+###  http://purl.org/artiamas/cm/CBE
+:CBE rdf:type owl:Class ;
+     rdfs:subClassOf :HostileAction ;
+     rdfs:label "close battle event" .
+
+
+###  http://purl.org/artiamas/cm/Cancel
+:Cancel rdf:type owl:Class ;
+        rdfs:subClassOf :Action ;
+        rdfs:comment "Action of canceling a planed action" ;
+        rdfs:label "cancel" .
 
 
 ###  http://purl.org/artiamas/cm/CombatMission
 :CombatMission rdf:type owl:Class ;
-               rdfs:subClassOf :Mission .
+               rdfs:subClassOf :Mission ;
+               rdfs:label "combad mission" .
 
 
 ###  http://purl.org/artiamas/cm/Company
 :Company rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata wd:Q102538 .
+         :wikidata wd:Q102538 ;
+         rdfs:label "Company" .
 
 
 ###  http://purl.org/artiamas/cm/Crossing
@@ -226,7 +287,8 @@
 
 ###  http://purl.org/artiamas/cm/CrossingTask
 :CrossingTask rdf:type owl:Class ;
-              rdfs:subClassOf :Task .
+              rdfs:subClassOf :Task ;
+              rdfs:label "crossing task" .
 
 
 ###  http://purl.org/artiamas/cm/Detect
@@ -237,7 +299,7 @@
 
 ###  http://purl.org/artiamas/cm/DirectFire
 :DirectFire rdf:type owl:Class ;
-            rdfs:subClassOf :Action ;
+            rdfs:subClassOf :HostileAction ;
             rdfs:label "directFire" .
 
 
@@ -249,35 +311,56 @@
 
 ###  http://purl.org/artiamas/cm/EndFight
 :EndFight rdf:type owl:Class ;
-          rdfs:subClassOf :Action ;
+          rdfs:subClassOf :HostileAction ;
           rdfs:label "endFight" .
 
 
 ###  http://purl.org/artiamas/cm/Engage
 :Engage rdf:type owl:Class ;
-        rdfs:subClassOf :Action ;
+        rdfs:subClassOf :HostileAction ;
         :wikidata <https://www.wikidata.org/wiki/Q48767773> ;
-        rdfs:label "engage" .
+        rdfs:label "Engage" .
 
 
 ###  http://purl.org/artiamas/cm/EngineeringCompany
 :EngineeringCompany rdf:type owl:Class ;
-                    rdfs:subClassOf :Company .
+                    rdfs:subClassOf :Company ;
+                    rdfs:label "engineering company" .
+
+
+###  http://purl.org/artiamas/cm/Firing
+:Firing rdf:type owl:Class ;
+        rdfs:subClassOf :HostileAction ;
+        rdfs:label "firing" .
 
 
 ###  http://purl.org/artiamas/cm/Force
 :Force rdf:type owl:Class .
 
 
+###  http://purl.org/artiamas/cm/Fuel
+:Fuel rdf:type owl:Class ;
+      rdfs:subClassOf :Supplies ;
+      :wikidata "https://www.wikidata.org/wiki/Q42501" ;
+      rdfs:label "fuel" .
+
+
+###  http://purl.org/artiamas/cm/HostileAction
+:HostileAction rdf:type owl:Class ;
+               rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/InfantryBrigade
 :InfantryBrigade rdf:type owl:Class ;
-                 rdfs:subClassOf :Brigade .
+                 rdfs:subClassOf :Brigade ;
+                 rdfs:label "infantry brigade" .
 
 
 ###  http://purl.org/artiamas/cm/InfantryRegiment
 :InfantryRegiment rdf:type owl:Class ;
                   rdfs:subClassOf :Regiment ;
-                  owl:disjointWith :TankRegiment .
+                  owl:disjointWith :TankRegiment ;
+                  rdfs:label "infantry regiment" .
 
 
 ###  http://purl.org/artiamas/cm/LostSA
@@ -296,17 +379,20 @@
 
 ###  http://purl.org/artiamas/cm/MilitaryUnit
 :MilitaryUnit rdf:type owl:Class ;
-              :wikidata wd:Q176799 .
+              :wikidata wd:Q176799 ;
+              rdfs:label "military unit" .
 
 
 ###  http://purl.org/artiamas/cm/Mission
-:Mission rdf:type owl:Class .
+:Mission rdf:type owl:Class ;
+         rdfs:label "mission" .
 
 
 ###  http://purl.org/artiamas/cm/MortarPlatoon
 :MortarPlatoon rdf:type owl:Class ;
                rdfs:subClassOf :Platoon ;
-               :wikidata wd:Q47317560 .
+               :wikidata wd:Q47317560 ;
+               rdfs:label "mortar platoon" .
 
 
 ###  http://purl.org/artiamas/cm/Move
@@ -317,24 +403,47 @@
 
 ###  http://purl.org/artiamas/cm/NONE
 :NONE rdf:type owl:Class ;
-      rdfs:subClassOf :MilitaryUnit .
+      rdfs:subClassOf :MilitaryUnit ;
+      rdfs:label "None" .
 
 
 ###  http://purl.org/artiamas/cm/Obstacle
 :Obstacle rdf:type owl:Class ;
-          :wikidata <https://www.wikidata.org/wiki/Q264661> .
+          :wikidata <https://www.wikidata.org/wiki/Q264661> ;
+          rdfs:label "obstacle" .
+
+
+###  http://purl.org/artiamas/cm/Pause
+:Pause rdf:type owl:Class ;
+       rdfs:subClassOf :Action ;
+       :wikidata "https://www.wikidata.org/wiki/Q17562059" ;
+       rdfs:comment "action of pausing an ongoing action" ;
+       rdfs:label "pause" .
 
 
 ###  http://purl.org/artiamas/cm/Platoon
 :Platoon rdf:type owl:Class ;
          rdfs:subClassOf :MilitaryUnit ;
-         :wikidata wd:Q304673 .
+         :wikidata wd:Q304673 ;
+         rdfs:label "Platoon" .
+
+
+###  http://purl.org/artiamas/cm/Red
+:Red rdf:type owl:Class ;
+     rdfs:subClassOf :Force .
+
+
+###  http://purl.org/artiamas/cm/RedSupplyUnit
+:RedSupplyUnit rdf:type owl:Class ;
+               rdfs:subClassOf :SupplyUnit ;
+               rdfs:label "red supply unit" .
 
 
 ###  http://purl.org/artiamas/cm/Regiment
 :Regiment rdf:type owl:Class ;
           rdfs:subClassOf :MilitaryUnit ;
-          :wikidata wd:Q52371 .
+          :wikidata wd:Q52371 ;
+          rdfs:label "Regiment" .
 
 
 ###  http://purl.org/artiamas/cm/RegimentOrBrigade
@@ -342,13 +451,20 @@
                    rdfs:subClassOf :MilitaryUnit ;
                    owl:disjointUnionOf ( :Brigade
                                          :Regiment
-                                       ) .
+                                       ) ;
+                   rdfs:label "Regiment or Brigade" .
 
 
 ###  http://purl.org/artiamas/cm/Report
 :Report rdf:type owl:Class ;
         rdfs:subClassOf :Action ;
         rdfs:label "report" .
+
+
+###  http://purl.org/artiamas/cm/Resume
+:Resume rdf:type owl:Class ;
+        rdfs:subClassOf :Action ;
+        rdfs:label "a resume action" .
 
 
 ###  http://purl.org/artiamas/cm/Resupply
@@ -359,7 +475,8 @@
 
 ###  http://purl.org/artiamas/cm/ScoutPlatoon
 :ScoutPlatoon rdf:type owl:Class ;
-              rdfs:subClassOf :Platoon .
+              rdfs:subClassOf :Platoon ;
+              rdfs:label "scout platoon" .
 
 
 ###  http://purl.org/artiamas/cm/Simulation
@@ -369,26 +486,44 @@
 ###  http://purl.org/artiamas/cm/Squad
 :Squad rdf:type owl:Class ;
        rdfs:subClassOf :MilitaryUnit ;
-       :wikidata wd:Q207063 .
+       :wikidata wd:Q207063 ;
+       rdfs:label "Squad" .
 
 
 ###  http://purl.org/artiamas/cm/StartFight
 :StartFight rdf:type owl:Class ;
-            rdfs:subClassOf :Action ;
+            rdfs:subClassOf :HostileAction ;
             rdfs:label "startFight" .
+
+
+###  http://purl.org/artiamas/cm/Stop
+:Stop rdf:type owl:Class ;
+      rdfs:subClassOf :Action ;
+      rdfs:comment "action of stopping an ongoing action" ;
+      rdfs:label "stop" .
 
 
 ###  http://purl.org/artiamas/cm/Supplies
 :Supplies rdf:type owl:Class .
 
 
+###  http://purl.org/artiamas/cm/SupplyUnit
+:SupplyUnit rdf:type owl:Class ;
+            rdfs:subClassOf :MilitaryUnit ;
+            rdfs:label "supply unit" .
+
+
 ###  http://purl.org/artiamas/cm/TankRegiment
 :TankRegiment rdf:type owl:Class ;
-              rdfs:subClassOf :Regiment .
+              rdfs:subClassOf :Regiment ;
+              :wikidata "https://www.wikidata.org/wiki/Q14869485" ;
+              rdfs:label "tank regiment" .
 
 
 ###  http://purl.org/artiamas/cm/Task
-:Task rdf:type owl:Class .
+:Task rdf:type owl:Class ;
+      :wikidata "https://www.wikidata.org/wiki/Q759676" ;
+      rdfs:label "task" .
 
 
 ###  http://purl.org/artiamas/cm/TaskReport
@@ -398,27 +533,10 @@
 
 
 #################################################################
-#    Individuals
+#    Annotations
 #################################################################
 
-###  http://purl.org/artiamas/cm/AMMO
-:AMMO rdf:type owl:NamedIndividual ,
-               :Supplies .
-
-
-###  http://purl.org/artiamas/cm/BLUE
-:BLUE rdf:type owl:NamedIndividual ,
-               :Force .
-
-
-###  http://purl.org/artiamas/cm/FUEL
-:FUEL rdf:type owl:NamedIndividual ,
-               :Supplies .
-
-
-###  http://purl.org/artiamas/cm/RED
-:RED rdf:type owl:NamedIndividual ,
-              :Force .
+:amr rdfs:comment "abstract meaning representation concept" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
