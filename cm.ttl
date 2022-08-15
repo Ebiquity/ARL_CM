@@ -14,7 +14,9 @@
 #################################################################
 
 ###  http://purl.org/artiamas/cm/amr
-:amr rdf:type owl:AnnotationProperty .
+:amr rdf:type owl:AnnotationProperty ;
+     rdfs:range xsd:string ;
+     rdfs:domain :Action .
 
 
 ###  http://purl.org/artiamas/cm/wikidata
@@ -101,6 +103,11 @@
         rdfs:range :MilitaryUnit .
 
 
+###  http://purl.org/artiamas/cm/subject
+:subject rdf:type owl:ObjectProperty ;
+         rdfs:domain :Action .
+
+
 ###  http://purl.org/artiamas/cm/target
 :target rdf:type owl:ObjectProperty ;
         rdfs:domain :Message .
@@ -128,9 +135,7 @@
 
 
 ###  http://purl.org/artiamas/cm/amr
-:amr rdf:type owl:DatatypeProperty ;
-     rdfs:domain :Action ;
-     rdfs:range xsd:string .
+:amr rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/artiamas/cm/endTime
@@ -154,12 +159,32 @@
 
 
 ###  http://purl.org/artiamas/cm/grid
-:grid rdf:type owl:DatatypeProperty .
+:grid rdf:type owl:DatatypeProperty ;
+      rdfs:domain :GridPoint ;
+      rdfs:range xsd:string .
+
+
+###  http://purl.org/artiamas/cm/latitude
+:latitude rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :GeoPoint ;
+          rdfs:range xsd:double ;
+          :wikidata "https://www.wikidata.org/wiki/Q34027" ;
+          rdfs:label "latitude" .
 
 
 ###  http://purl.org/artiamas/cm/level
 :level rdf:type owl:DatatypeProperty ;
        rdfs:range xsd:string .
+
+
+###  http://purl.org/artiamas/cm/longitude
+:longitude rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :GeoPoint ;
+           rdfs:range xsd:double ;
+           :wikidata "https://www.wikidata.org/wiki/Q36477" ;
+           rdfs:label "longitude" .
 
 
 ###  http://purl.org/artiamas/cm/messageType
@@ -230,6 +255,11 @@
            rdfs:label "Battalion" .
 
 
+###  http://purl.org/artiamas/cm/Begin
+:Begin rdf:type owl:Class ;
+       rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/Blue
 :Blue rdf:type owl:Class ;
       rdfs:subClassOf :Force .
@@ -285,10 +315,22 @@
           rdfs:label "crossing" .
 
 
+###  http://purl.org/artiamas/cm/CrossingControlPoint
+:CrossingControlPoint rdf:type owl:Class ;
+                      rdfs:subClassOf :Location ;
+                      :wikidata "crossing control point" ,
+                                "https://www.wikidata.org/wiki/Q88871664" .
+
+
 ###  http://purl.org/artiamas/cm/CrossingTask
 :CrossingTask rdf:type owl:Class ;
               rdfs:subClassOf :Task ;
               rdfs:label "crossing task" .
+
+
+###  http://purl.org/artiamas/cm/CrossingTaskAction
+:CrossingTaskAction rdf:type owl:Class ;
+                    rdfs:subClassOf :TaskAction .
 
 
 ###  http://purl.org/artiamas/cm/Detect
@@ -328,6 +370,16 @@
                     rdfs:label "engineering company" .
 
 
+###  http://purl.org/artiamas/cm/Fail
+:Fail rdf:type owl:Class ;
+      rdfs:subClassOf :Action .
+
+
+###  http://purl.org/artiamas/cm/Finish
+:Finish rdf:type owl:Class ;
+        rdfs:subClassOf :Action .
+
+
 ###  http://purl.org/artiamas/cm/Firing
 :Firing rdf:type owl:Class ;
         rdfs:subClassOf :HostileAction ;
@@ -343,6 +395,19 @@
       rdfs:subClassOf :Supplies ;
       :wikidata "https://www.wikidata.org/wiki/Q42501" ;
       rdfs:label "fuel" .
+
+
+###  http://purl.org/artiamas/cm/GeoPoint
+:GeoPoint rdf:type owl:Class ;
+          rdfs:subClassOf :Location ;
+          rdfs:label "geopoit using latitude and longitude" .
+
+
+###  http://purl.org/artiamas/cm/GridPoint
+:GridPoint rdf:type owl:Class ;
+           rdfs:subClassOf :Location ;
+           :wikidata "https://www.wikidata.org/wiki/Q1922471" ;
+           rdfs:label "MGRS geolocation" .
 
 
 ###  http://purl.org/artiamas/cm/HostileAction
@@ -361,6 +426,12 @@
                   rdfs:subClassOf :Regiment ;
                   owl:disjointWith :TankRegiment ;
                   rdfs:label "infantry regiment" .
+
+
+###  http://purl.org/artiamas/cm/Location
+:Location rdf:type owl:Class ;
+          :wikidata "https://www.wikidata.org/wiki/Q2221906" ;
+          rdfs:label "location" .
 
 
 ###  http://purl.org/artiamas/cm/LostSA
@@ -524,6 +595,11 @@
 :Task rdf:type owl:Class ;
       :wikidata "https://www.wikidata.org/wiki/Q759676" ;
       rdfs:label "task" .
+
+
+###  http://purl.org/artiamas/cm/TaskAction
+:TaskAction rdf:type owl:Class ;
+            rdfs:subClassOf :Action .
 
 
 ###  http://purl.org/artiamas/cm/TaskReport
