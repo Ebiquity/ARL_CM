@@ -1,0 +1,89 @@
+
+# how many messages are there?
+prefix cm: <http://purl.org/artiamas/cm/> 
+select (count (?msg) as ?msgCount) {
+  ?msg rdf:type cm:CombatMessage
+}
+
+# how many actions are there?
+prefix cm: <http://purl.org/artiamas/cm/> 
+select (count (?act) as ?actCount) {
+  ?act rdf:type cm:Action.
+}
+
+# show the properties that messages have
+prefix cm: <http://purl.org/artiamas/cm/> 
+select (distint ?property) {
+  ?msg a cm:CombatMessage ?property ?value
+}
+
+# show the properties that actions have
+prefix cm: <http://purl.org/artiamas/cm/> 
+select distinct ?property {
+  ?msg a cm:Action; 
+       ?property ?value .
+}
+
+# show the subtypes of action
+prefix cm: <http://purl.org/artiamas/cm/> 
+select distinct ?act {
+  ?act rdfs:subClassOf* cm:Action .
+}
+
+# what units are mentioned in the simulation
+prefix cm: <http://purl.org/artiamas/cm/> 
+select distinct ?unit ?force ?type {
+  ?u  rdf:type cm:MilitaryUnit;
+      cm:isa/rdfs:label ?type;
+      rdfs:label ?unit; 
+      cm:force ?force .
+}
+ORDER BY ASC(?force)
+
+# what units have engaged in hostile encoounters
+prefix cm: <http://purl.org/artiamas/cm/> 
+select distinct ?unit1 ?unit2 {
+  ?action rdf:type cm:HostileAction;
+           cm:isa/rdfs:label ?type;
+           cm:subject/rdfs:label ?unit1;
+           cm:object/rdfs:label ?unit2.
+}
+ORDER BY ASC(?unit1)
+
+# was the crossing task completed?
+prefix cm: <http://purl.org/artiamas/cm/> 
+ask {?act cm:isa cm:Crossing; cm:endTime ?t}
+
+# where is the crossing control point
+prefix cm: <http://purl.org/artiamas/cm/> 
+select ?lat ?lon ?grid where {
+    ?act cm:isa cm:Begin; cm:object/cm:isa cm:CrossingTaskAction; cm:location ?gp.
+    ?gp cm:longitude ?lon; cm:latitude ?lat; cm:grid ?grid.
+}
+
+# have any units crossed?
+prefix cm: <http://purl.org/artiamas/cm/> 
+ask {
+  ?act cm:isa cm:Crossing; 
+       cm:endTime ?time.
+}
+
+#what units have crossed and when did they do it?
+prefix cm: <http://purl.org/artiamas/cm/> 
+select ?act ?unit ?time ?minutes {
+    ?act cm:isa cm:Crossing; 
+         cm:subject/rdfs:label ?unit; 
+         cm:endTime ?time; 
+         cm:minutes ?minutes
+}
+ORDER BY ASC(?minutes)
+
+# what Blue units participataed in a CBE (close battle event) with a red unit?
+prefix cm: <http://purl.org/artiamas/cm/> 
+select distinct ?blueUnit ?redUnit {
+    ?act cm:isa cm:CBE; 
+         cm:subject/rdfs:label ?blueUnit; 
+         cm:object/rdfs:label ?redUnit
+}
+ORDER BY DESC(?redUnit)
+
