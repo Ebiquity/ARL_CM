@@ -1,23 +1,22 @@
-###
+# Stardog Help
 
-##Installing stardog on your computer
+## Installing stardog on your computer
 
 (1) goto https://www.stardog.com/get-started/
 
 (2) click on download, creating an account if needed
 
-(3) get licence key
+(3) get license key
 
 (4) install version for your computer,
 https://docs.stardog.com/get-started/install-stardog/
 
 (5) create a directory that stardog will use to to store your databases
 (e.g. /var/stardog on unix or macosx)
-(5.1) put the licnece key in that directory
-
+(5.1) put the license key in that directory
 (5.2) on unix ands mac set STARDOG_HOME as an alias for this directory
 
-(5) start the stardog server using the stardof-admin program that was
+(5) start the stardog server using the stardog-admin program that was
 installed
 
     stardog-admin server start
@@ -31,9 +30,9 @@ The default is that the server's endpoint is to
 http://localhost:5820.  This will be used by the web intergace and can
 also be used by programs to send SPARAL queries to the server.
 
-----
 
-B. the stardog command
+
+## The stardog command
 
 Stardog can be used from the command line via the stardog command
 
@@ -53,14 +52,15 @@ stardog query execute sim "select * where { ?s ?p ?o } limit 3"
 
 Query returned 3 results in 00:00:00.242
 
-----
 
-C. Using the web interface: Stardog Studio https://docs.stardog.com/stardog-applications/studio/
+## Using the web interface: 
+
+See [Stardog Studio](https://docs.stardog.com/stardog-applications/studio/)
 
 Stardog has a nice web interface called stardog studio that you will
 probably want to use for most interactions adter you have started your server.
 
-Using Stardog Studio (https://docs.stardog.com/get-started/access-studio)
+[Using Stardog Studio](https://docs.stardog.com/get-started/access-studio)
 
 https://www.stardog.com/studio/
 
